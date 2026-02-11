@@ -1,0 +1,3402 @@
+[
+    {
+        "name": "Food & Drink Event 1",
+        "city": "Liverpool",
+        "category": "Food & Drink",
+        "date": "2025-07-22",
+        "price": 66.19,
+        "available_seats": 38,
+        "tags": [
+            "food & drink",
+            "tasting",
+            "local"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -2.9779,
+                53.4084
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 237,
+                "comment": "Loved it!",
+                "rating": 4,
+                "date": "2025-10-26"
+            },
+            {
+                "user_id": 114,
+                "comment": "Amazing experience!",
+                "rating": 3,
+                "date": "2025-01-20"
+            }
+        ]
+    },
+    {
+        "name": "Fitness Event 2",
+        "city": "Manchester",
+        "category": "Fitness",
+        "date": "2025-08-03",
+        "price": 11.57,
+        "available_seats": 43,
+        "tags": [
+            "fitness",
+            "wellness",
+            "outdoors"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -2.2426,
+                53.4808
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 241,
+                "comment": "Could be better.",
+                "rating": 3,
+                "date": "2025-10-17"
+            },
+            {
+                "user_id": 131,
+                "comment": "Great event!",
+                "rating": 5,
+                "date": "2025-11-18"
+            }
+        ]
+    },
+    {
+        "name": "Music Event 3",
+        "city": "Cardiff",
+        "category": "Music",
+        "date": "2025-10-23",
+        "price": 60.04,
+        "available_seats": 32,
+        "tags": [
+            "music",
+            "live",
+            "local"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -3.1791,
+                51.4816
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 156,
+                "comment": "Loved it!",
+                "rating": 5,
+                "date": "2025-03-10"
+            },
+            {
+                "user_id": 174,
+                "comment": "Could be better.",
+                "rating": 3,
+                "date": "2025-10-04"
+            }
+        ]
+    },
+    {
+        "name": "Film & Media Event 4",
+        "city": "Manchester",
+        "category": "Film & Media",
+        "date": "2025-06-07",
+        "price": 57.66,
+        "available_seats": 194,
+        "tags": [
+            "film",
+            "screening",
+            "media"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -2.2426,
+                53.4808
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 146,
+                "comment": "Loved it!",
+                "rating": 5,
+                "date": "2025-10-20"
+            },
+            {
+                "user_id": 263,
+                "comment": "Great event!",
+                "rating": 4,
+                "date": "2025-02-19"
+            }
+        ]
+    },
+    {
+        "name": "Sports Event 5",
+        "city": "Nottingham",
+        "category": "Sports",
+        "date": "2025-10-16",
+        "price": 10.6,
+        "available_seats": 72,
+        "tags": [
+            "sports",
+            "fitness",
+            "competition"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.1496,
+                52.9548
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 227,
+                "comment": "Would attend again!",
+                "rating": 5,
+                "date": "2025-08-07"
+            },
+            {
+                "user_id": 298,
+                "comment": "Very well organized.",
+                "rating": 4,
+                "date": "2025-10-27"
+            }
+        ]
+    },
+    {
+        "name": "Comedy Event 6",
+        "city": "Edinburgh",
+        "category": "Comedy",
+        "date": "2025-06-03",
+        "price": 28.35,
+        "available_seats": 66,
+        "tags": [
+            "comedy",
+            "standup",
+            "fun"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -3.1883,
+                55.9533
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 278,
+                "comment": "Had a great time!",
+                "rating": 3,
+                "date": "2025-02-11"
+            },
+            {
+                "user_id": 247,
+                "comment": "Very well organized.",
+                "rating": 5,
+                "date": "2025-09-11"
+            }
+        ]
+    },
+    {
+        "name": "Education & Workshops Event 7",
+        "city": "Liverpool",
+        "category": "Education & Workshops",
+        "date": "2025-05-28",
+        "price": 62.24,
+        "available_seats": 38,
+        "tags": [
+            "education",
+            "workshop",
+            "skills"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -2.9779,
+                53.4084
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 130,
+                "comment": "Amazing experience!",
+                "rating": 4,
+                "date": "2025-03-26"
+            },
+            {
+                "user_id": 293,
+                "comment": "Very well organized.",
+                "rating": 3,
+                "date": "2025-09-08"
+            }
+        ]
+    },
+    {
+        "name": "Music Event 8",
+        "city": "Bristol",
+        "category": "Music",
+        "date": "2025-12-09",
+        "price": 12.3,
+        "available_seats": 162,
+        "tags": [
+            "music",
+            "live",
+            "local"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -2.5879,
+                51.4545
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 246,
+                "comment": "Had a great time!",
+                "rating": 4,
+                "date": "2025-06-24"
+            },
+            {
+                "user_id": 277,
+                "comment": "Very well organized.",
+                "rating": 5,
+                "date": "2025-09-12"
+            }
+        ]
+    },
+    {
+        "name": "Education & Workshops Event 9",
+        "city": "Cardiff",
+        "category": "Education & Workshops",
+        "date": "2025-02-05",
+        "price": 83.96,
+        "available_seats": 89,
+        "tags": [
+            "education",
+            "workshop",
+            "skills"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -3.1791,
+                51.4816
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 221,
+                "comment": "Would attend again!",
+                "rating": 5,
+                "date": "2025-02-03"
+            },
+            {
+                "user_id": 115,
+                "comment": "Would attend again!",
+                "rating": 5,
+                "date": "2025-06-08"
+            }
+        ]
+    },
+    {
+        "name": "Education & Workshops Event 10",
+        "city": "Cardiff",
+        "category": "Education & Workshops",
+        "date": "2025-05-26",
+        "price": 72.36,
+        "available_seats": 191,
+        "tags": [
+            "education",
+            "workshop",
+            "skills"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -3.1791,
+                51.4816
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 188,
+                "comment": "Loved it!",
+                "rating": 4,
+                "date": "2025-07-01"
+            },
+            {
+                "user_id": 143,
+                "comment": "Amazing experience!",
+                "rating": 3,
+                "date": "2025-09-10"
+            }
+        ]
+    },
+    {
+        "name": "Technology Event 11",
+        "city": "London",
+        "category": "Technology",
+        "date": "2025-05-28",
+        "price": 17.16,
+        "available_seats": 83,
+        "tags": [
+            "technology",
+            "innovation",
+            "talks"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1276,
+                51.5072
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 201,
+                "comment": "Could be better.",
+                "rating": 4,
+                "date": "2025-02-11"
+            },
+            {
+                "user_id": 142,
+                "comment": "Could be better.",
+                "rating": 4,
+                "date": "2025-10-09"
+            }
+        ]
+    },
+    {
+        "name": "Food & Drink Event 12",
+        "city": "Glasgow",
+        "category": "Food & Drink",
+        "date": "2025-08-09",
+        "price": 86.21,
+        "available_seats": 91,
+        "tags": [
+            "food & drink",
+            "tasting",
+            "local"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -4.2518,
+                55.8642
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 280,
+                "comment": "Could be better.",
+                "rating": 4,
+                "date": "2025-12-16"
+            },
+            {
+                "user_id": 197,
+                "comment": "Great event!",
+                "rating": 3,
+                "date": "2025-02-12"
+            }
+        ]
+    },
+    {
+        "name": "Food & Drink Event 13",
+        "city": "Birmingham",
+        "category": "Food & Drink",
+        "date": "2025-04-29",
+        "price": 66.9,
+        "available_seats": 23,
+        "tags": [
+            "food & drink",
+            "tasting",
+            "local"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.8904,
+                52.4862
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 224,
+                "comment": "Had a great time!",
+                "rating": 5,
+                "date": "2025-04-04"
+            },
+            {
+                "user_id": 167,
+                "comment": "Very well organized.",
+                "rating": 3,
+                "date": "2025-03-16"
+            }
+        ]
+    },
+    {
+        "name": "Business & Networking Event 14",
+        "city": "Bristol",
+        "category": "Business & Networking",
+        "date": "2025-07-09",
+        "price": 62.32,
+        "available_seats": 101,
+        "tags": [
+            "business",
+            "networking",
+            "startup"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -2.5879,
+                51.4545
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 132,
+                "comment": "Would attend again!",
+                "rating": 5,
+                "date": "2025-11-13"
+            },
+            {
+                "user_id": 267,
+                "comment": "Would attend again!",
+                "rating": 5,
+                "date": "2025-01-28"
+            }
+        ]
+    },
+    {
+        "name": "Business & Networking Event 15",
+        "city": "Edinburgh",
+        "category": "Business & Networking",
+        "date": "2025-07-20",
+        "price": 42.42,
+        "available_seats": 120,
+        "tags": [
+            "business",
+            "networking",
+            "startup"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -3.1883,
+                55.9533
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 126,
+                "comment": "Could be better.",
+                "rating": 5,
+                "date": "2025-07-25"
+            },
+            {
+                "user_id": 115,
+                "comment": "Great event!",
+                "rating": 3,
+                "date": "2025-04-17"
+            }
+        ]
+    },
+    {
+        "name": "Food & Drink Event 16",
+        "city": "Edinburgh",
+        "category": "Food & Drink",
+        "date": "2025-02-26",
+        "price": 36.97,
+        "available_seats": 33,
+        "tags": [
+            "food & drink",
+            "tasting",
+            "local"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -3.1883,
+                55.9533
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 126,
+                "comment": "Loved it!",
+                "rating": 5,
+                "date": "2025-03-19"
+            },
+            {
+                "user_id": 237,
+                "comment": "Loved it!",
+                "rating": 4,
+                "date": "2025-11-11"
+            }
+        ]
+    },
+    {
+        "name": "Sports Event 17",
+        "city": "London",
+        "category": "Sports",
+        "date": "2025-04-17",
+        "price": 62.72,
+        "available_seats": 58,
+        "tags": [
+            "sports",
+            "fitness",
+            "competition"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1276,
+                51.5072
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 262,
+                "comment": "Very well organized.",
+                "rating": 4,
+                "date": "2025-11-05"
+            },
+            {
+                "user_id": 193,
+                "comment": "Could be better.",
+                "rating": 3,
+                "date": "2025-03-01"
+            }
+        ]
+    },
+    {
+        "name": "Education & Workshops Event 18",
+        "city": "Edinburgh",
+        "category": "Education & Workshops",
+        "date": "2025-09-03",
+        "price": 50.48,
+        "available_seats": 41,
+        "tags": [
+            "education",
+            "workshop",
+            "skills"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -3.1883,
+                55.9533
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 136,
+                "comment": "Loved it!",
+                "rating": 5,
+                "date": "2025-06-25"
+            },
+            {
+                "user_id": 289,
+                "comment": "Very well organized.",
+                "rating": 4,
+                "date": "2025-12-21"
+            }
+        ]
+    },
+    {
+        "name": "Business & Networking Event 19",
+        "city": "Birmingham",
+        "category": "Business & Networking",
+        "date": "2025-01-12",
+        "price": 24.29,
+        "available_seats": 155,
+        "tags": [
+            "business",
+            "networking",
+            "startup"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.8904,
+                52.4862
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 192,
+                "comment": "Great event!",
+                "rating": 5,
+                "date": "2025-10-06"
+            },
+            {
+                "user_id": 106,
+                "comment": "Had a great time!",
+                "rating": 5,
+                "date": "2025-06-02"
+            }
+        ]
+    },
+    {
+        "name": "Art & Culture Event 20",
+        "city": "Manchester",
+        "category": "Art & Culture",
+        "date": "2025-09-23",
+        "price": 39.47,
+        "available_seats": 62,
+        "tags": [
+            "art & culture",
+            "gallery",
+            "creative"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -2.2426,
+                53.4808
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 191,
+                "comment": "Had a great time!",
+                "rating": 3,
+                "date": "2025-09-30"
+            },
+            {
+                "user_id": 238,
+                "comment": "Had a great time!",
+                "rating": 5,
+                "date": "2025-06-18"
+            }
+        ]
+    },
+    {
+        "name": "Film & Media Event 21",
+        "city": "Leeds",
+        "category": "Film & Media",
+        "date": "2025-04-10",
+        "price": 80.77,
+        "available_seats": 122,
+        "tags": [
+            "film",
+            "screening",
+            "media"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.5491,
+                53.8008
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 289,
+                "comment": "Had a great time!",
+                "rating": 3,
+                "date": "2025-04-13"
+            },
+            {
+                "user_id": 232,
+                "comment": "Could be better.",
+                "rating": 4,
+                "date": "2025-01-15"
+            }
+        ]
+    },
+    {
+        "name": "Art & Culture Event 22",
+        "city": "London",
+        "category": "Art & Culture",
+        "date": "2025-08-30",
+        "price": 29.36,
+        "available_seats": 197,
+        "tags": [
+            "art & culture",
+            "gallery",
+            "creative"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1276,
+                51.5072
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 254,
+                "comment": "Very well organized.",
+                "rating": 4,
+                "date": "2025-06-28"
+            },
+            {
+                "user_id": 193,
+                "comment": "Loved it!",
+                "rating": 3,
+                "date": "2025-02-22"
+            }
+        ]
+    },
+    {
+        "name": "Education & Workshops Event 23",
+        "city": "Leeds",
+        "category": "Education & Workshops",
+        "date": "2025-04-11",
+        "price": 36.75,
+        "available_seats": 143,
+        "tags": [
+            "education",
+            "workshop",
+            "skills"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.5491,
+                53.8008
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 259,
+                "comment": "Amazing experience!",
+                "rating": 3,
+                "date": "2025-09-03"
+            },
+            {
+                "user_id": 267,
+                "comment": "Very well organized.",
+                "rating": 5,
+                "date": "2025-02-13"
+            }
+        ]
+    },
+    {
+        "name": "Fitness Event 24",
+        "city": "Manchester",
+        "category": "Fitness",
+        "date": "2025-12-31",
+        "price": 75.51,
+        "available_seats": 142,
+        "tags": [
+            "fitness",
+            "wellness",
+            "outdoors"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -2.2426,
+                53.4808
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 145,
+                "comment": "Could be better.",
+                "rating": 5,
+                "date": "2025-06-20"
+            },
+            {
+                "user_id": 122,
+                "comment": "Had a great time!",
+                "rating": 5,
+                "date": "2025-07-22"
+            }
+        ]
+    },
+    {
+        "name": "Fitness Event 25",
+        "city": "Edinburgh",
+        "category": "Fitness",
+        "date": "2025-02-13",
+        "price": 73.13,
+        "available_seats": 63,
+        "tags": [
+            "fitness",
+            "wellness",
+            "outdoors"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -3.1883,
+                55.9533
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 132,
+                "comment": "Loved it!",
+                "rating": 3,
+                "date": "2025-10-30"
+            },
+            {
+                "user_id": 219,
+                "comment": "Had a great time!",
+                "rating": 5,
+                "date": "2025-03-16"
+            }
+        ]
+    },
+    {
+        "name": "Film & Media Event 26",
+        "city": "Cardiff",
+        "category": "Film & Media",
+        "date": "2025-08-31",
+        "price": 66.78,
+        "available_seats": 109,
+        "tags": [
+            "film",
+            "screening",
+            "media"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -3.1791,
+                51.4816
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 139,
+                "comment": "Amazing experience!",
+                "rating": 5,
+                "date": "2025-03-09"
+            },
+            {
+                "user_id": 105,
+                "comment": "Loved it!",
+                "rating": 5,
+                "date": "2025-11-29"
+            }
+        ]
+    },
+    {
+        "name": "Business & Networking Event 27",
+        "city": "Manchester",
+        "category": "Business & Networking",
+        "date": "2025-03-13",
+        "price": 45.78,
+        "available_seats": 69,
+        "tags": [
+            "business",
+            "networking",
+            "startup"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -2.2426,
+                53.4808
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 154,
+                "comment": "Loved it!",
+                "rating": 4,
+                "date": "2025-04-19"
+            },
+            {
+                "user_id": 174,
+                "comment": "Amazing experience!",
+                "rating": 3,
+                "date": "2025-10-28"
+            }
+        ]
+    },
+    {
+        "name": "Art & Culture Event 28",
+        "city": "Liverpool",
+        "category": "Art & Culture",
+        "date": "2025-10-06",
+        "price": 44.39,
+        "available_seats": 53,
+        "tags": [
+            "art & culture",
+            "gallery",
+            "creative"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -2.9779,
+                53.4084
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 115,
+                "comment": "Would attend again!",
+                "rating": 4,
+                "date": "2025-08-23"
+            },
+            {
+                "user_id": 269,
+                "comment": "Amazing experience!",
+                "rating": 5,
+                "date": "2025-08-04"
+            }
+        ]
+    },
+    {
+        "name": "Food & Drink Event 29",
+        "city": "Nottingham",
+        "category": "Food & Drink",
+        "date": "2025-09-30",
+        "price": 19.27,
+        "available_seats": 150,
+        "tags": [
+            "food & drink",
+            "tasting",
+            "local"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.1496,
+                52.9548
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 104,
+                "comment": "Had a great time!",
+                "rating": 4,
+                "date": "2025-04-04"
+            },
+            {
+                "user_id": 255,
+                "comment": "Loved it!",
+                "rating": 3,
+                "date": "2025-03-30"
+            }
+        ]
+    },
+    {
+        "name": "Education & Workshops Event 30",
+        "city": "Birmingham",
+        "category": "Education & Workshops",
+        "date": "2025-11-13",
+        "price": 73.17,
+        "available_seats": 162,
+        "tags": [
+            "education",
+            "workshop",
+            "skills"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.8904,
+                52.4862
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 115,
+                "comment": "Very well organized.",
+                "rating": 5,
+                "date": "2025-09-23"
+            },
+            {
+                "user_id": 235,
+                "comment": "Amazing experience!",
+                "rating": 4,
+                "date": "2025-02-24"
+            }
+        ]
+    },
+    {
+        "name": "Music Event 31",
+        "city": "Nottingham",
+        "category": "Music",
+        "date": "2025-05-08",
+        "price": 22.98,
+        "available_seats": 30,
+        "tags": [
+            "music",
+            "live",
+            "local"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.1496,
+                52.9548
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 297,
+                "comment": "Loved it!",
+                "rating": 5,
+                "date": "2025-08-20"
+            },
+            {
+                "user_id": 243,
+                "comment": "Loved it!",
+                "rating": 3,
+                "date": "2025-08-15"
+            }
+        ]
+    },
+    {
+        "name": "Film & Media Event 32",
+        "city": "Liverpool",
+        "category": "Film & Media",
+        "date": "2025-09-16",
+        "price": 61.98,
+        "available_seats": 71,
+        "tags": [
+            "film",
+            "screening",
+            "media"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -2.9779,
+                53.4084
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 277,
+                "comment": "Very well organized.",
+                "rating": 4,
+                "date": "2025-09-18"
+            },
+            {
+                "user_id": 236,
+                "comment": "Had a great time!",
+                "rating": 4,
+                "date": "2025-09-17"
+            }
+        ]
+    },
+    {
+        "name": "Business & Networking Event 33",
+        "city": "Leeds",
+        "category": "Business & Networking",
+        "date": "2025-05-13",
+        "price": 91.74,
+        "available_seats": 71,
+        "tags": [
+            "business",
+            "networking",
+            "startup"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.5491,
+                53.8008
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 214,
+                "comment": "Great event!",
+                "rating": 4,
+                "date": "2025-03-04"
+            },
+            {
+                "user_id": 200,
+                "comment": "Could be better.",
+                "rating": 4,
+                "date": "2025-02-07"
+            }
+        ]
+    },
+    {
+        "name": "Fitness Event 34",
+        "city": "Leeds",
+        "category": "Fitness",
+        "date": "2025-02-07",
+        "price": 24.99,
+        "available_seats": 97,
+        "tags": [
+            "fitness",
+            "wellness",
+            "outdoors"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.5491,
+                53.8008
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 300,
+                "comment": "Loved it!",
+                "rating": 3,
+                "date": "2025-11-26"
+            },
+            {
+                "user_id": 269,
+                "comment": "Very well organized.",
+                "rating": 3,
+                "date": "2025-05-10"
+            }
+        ]
+    },
+    {
+        "name": "Education & Workshops Event 35",
+        "city": "Birmingham",
+        "category": "Education & Workshops",
+        "date": "2025-04-23",
+        "price": 75.19,
+        "available_seats": 44,
+        "tags": [
+            "education",
+            "workshop",
+            "skills"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.8904,
+                52.4862
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 201,
+                "comment": "Could be better.",
+                "rating": 3,
+                "date": "2025-12-08"
+            },
+            {
+                "user_id": 157,
+                "comment": "Great event!",
+                "rating": 5,
+                "date": "2025-08-09"
+            }
+        ]
+    },
+    {
+        "name": "Fitness Event 36",
+        "city": "Nottingham",
+        "category": "Fitness",
+        "date": "2025-06-23",
+        "price": 44.6,
+        "available_seats": 111,
+        "tags": [
+            "fitness",
+            "wellness",
+            "outdoors"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.1496,
+                52.9548
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 181,
+                "comment": "Loved it!",
+                "rating": 5,
+                "date": "2025-07-07"
+            },
+            {
+                "user_id": 104,
+                "comment": "Very well organized.",
+                "rating": 5,
+                "date": "2025-08-23"
+            }
+        ]
+    },
+    {
+        "name": "Music Event 37",
+        "city": "Edinburgh",
+        "category": "Music",
+        "date": "2025-07-16",
+        "price": 36.16,
+        "available_seats": 179,
+        "tags": [
+            "music",
+            "live",
+            "local"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -3.1883,
+                55.9533
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 175,
+                "comment": "Amazing experience!",
+                "rating": 3,
+                "date": "2025-02-27"
+            },
+            {
+                "user_id": 158,
+                "comment": "Loved it!",
+                "rating": 3,
+                "date": "2025-05-16"
+            }
+        ]
+    },
+    {
+        "name": "Music Event 38",
+        "city": "Glasgow",
+        "category": "Music",
+        "date": "2025-04-03",
+        "price": 30.42,
+        "available_seats": 53,
+        "tags": [
+            "music",
+            "live",
+            "local"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -4.2518,
+                55.8642
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 208,
+                "comment": "Had a great time!",
+                "rating": 5,
+                "date": "2025-05-13"
+            },
+            {
+                "user_id": 203,
+                "comment": "Great event!",
+                "rating": 5,
+                "date": "2025-09-21"
+            }
+        ]
+    },
+    {
+        "name": "Education & Workshops Event 39",
+        "city": "Cardiff",
+        "category": "Education & Workshops",
+        "date": "2025-12-25",
+        "price": 35.74,
+        "available_seats": 91,
+        "tags": [
+            "education",
+            "workshop",
+            "skills"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -3.1791,
+                51.4816
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 114,
+                "comment": "Had a great time!",
+                "rating": 5,
+                "date": "2025-04-04"
+            },
+            {
+                "user_id": 208,
+                "comment": "Loved it!",
+                "rating": 4,
+                "date": "2025-01-09"
+            }
+        ]
+    },
+    {
+        "name": "Art & Culture Event 40",
+        "city": "Manchester",
+        "category": "Art & Culture",
+        "date": "2025-02-12",
+        "price": 62.17,
+        "available_seats": 76,
+        "tags": [
+            "art & culture",
+            "gallery",
+            "creative"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -2.2426,
+                53.4808
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 117,
+                "comment": "Very well organized.",
+                "rating": 3,
+                "date": "2025-08-21"
+            },
+            {
+                "user_id": 102,
+                "comment": "Very well organized.",
+                "rating": 5,
+                "date": "2025-08-02"
+            }
+        ]
+    },
+    {
+        "name": "Film & Media Event 41",
+        "city": "Glasgow",
+        "category": "Film & Media",
+        "date": "2025-03-08",
+        "price": 9.06,
+        "available_seats": 81,
+        "tags": [
+            "film",
+            "screening",
+            "media"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -4.2518,
+                55.8642
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 128,
+                "comment": "Great event!",
+                "rating": 4,
+                "date": "2025-01-26"
+            },
+            {
+                "user_id": 146,
+                "comment": "Great event!",
+                "rating": 4,
+                "date": "2025-11-18"
+            }
+        ]
+    },
+    {
+        "name": "Business & Networking Event 42",
+        "city": "Glasgow",
+        "category": "Business & Networking",
+        "date": "2025-04-16",
+        "price": 32.26,
+        "available_seats": 148,
+        "tags": [
+            "business",
+            "networking",
+            "startup"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -4.2518,
+                55.8642
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 272,
+                "comment": "Great event!",
+                "rating": 4,
+                "date": "2025-06-27"
+            },
+            {
+                "user_id": 104,
+                "comment": "Very well organized.",
+                "rating": 3,
+                "date": "2025-01-08"
+            }
+        ]
+    },
+    {
+        "name": "Business & Networking Event 43",
+        "city": "London",
+        "category": "Business & Networking",
+        "date": "2025-10-10",
+        "price": 96.94,
+        "available_seats": 151,
+        "tags": [
+            "business",
+            "networking",
+            "startup"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1276,
+                51.5072
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 221,
+                "comment": "Great event!",
+                "rating": 4,
+                "date": "2025-02-24"
+            },
+            {
+                "user_id": 268,
+                "comment": "Had a great time!",
+                "rating": 5,
+                "date": "2025-08-10"
+            }
+        ]
+    },
+    {
+        "name": "Business & Networking Event 44",
+        "city": "Edinburgh",
+        "category": "Business & Networking",
+        "date": "2025-07-21",
+        "price": 96.21,
+        "available_seats": 98,
+        "tags": [
+            "business",
+            "networking",
+            "startup"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -3.1883,
+                55.9533
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 276,
+                "comment": "Great event!",
+                "rating": 3,
+                "date": "2025-06-25"
+            },
+            {
+                "user_id": 150,
+                "comment": "Had a great time!",
+                "rating": 5,
+                "date": "2025-11-22"
+            }
+        ]
+    },
+    {
+        "name": "Fitness Event 45",
+        "city": "Birmingham",
+        "category": "Fitness",
+        "date": "2025-06-27",
+        "price": 97.3,
+        "available_seats": 53,
+        "tags": [
+            "fitness",
+            "wellness",
+            "outdoors"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.8904,
+                52.4862
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 103,
+                "comment": "Loved it!",
+                "rating": 5,
+                "date": "2025-05-11"
+            },
+            {
+                "user_id": 210,
+                "comment": "Great event!",
+                "rating": 3,
+                "date": "2025-02-13"
+            }
+        ]
+    },
+    {
+        "name": "Business & Networking Event 46",
+        "city": "Bristol",
+        "category": "Business & Networking",
+        "date": "2025-12-10",
+        "price": 96.27,
+        "available_seats": 173,
+        "tags": [
+            "business",
+            "networking",
+            "startup"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -2.5879,
+                51.4545
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 162,
+                "comment": "Would attend again!",
+                "rating": 4,
+                "date": "2025-01-24"
+            },
+            {
+                "user_id": 217,
+                "comment": "Great event!",
+                "rating": 3,
+                "date": "2025-05-18"
+            }
+        ]
+    },
+    {
+        "name": "Music Event 47",
+        "city": "Edinburgh",
+        "category": "Music",
+        "date": "2025-05-15",
+        "price": 39.23,
+        "available_seats": 104,
+        "tags": [
+            "music",
+            "live",
+            "local"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -3.1883,
+                55.9533
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 240,
+                "comment": "Very well organized.",
+                "rating": 3,
+                "date": "2025-01-18"
+            },
+            {
+                "user_id": 179,
+                "comment": "Great event!",
+                "rating": 4,
+                "date": "2025-04-04"
+            }
+        ]
+    },
+    {
+        "name": "Comedy Event 48",
+        "city": "London",
+        "category": "Comedy",
+        "date": "2025-07-15",
+        "price": 12.89,
+        "available_seats": 91,
+        "tags": [
+            "comedy",
+            "standup",
+            "fun"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1276,
+                51.5072
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 228,
+                "comment": "Would attend again!",
+                "rating": 3,
+                "date": "2025-05-08"
+            },
+            {
+                "user_id": 229,
+                "comment": "Had a great time!",
+                "rating": 3,
+                "date": "2025-02-16"
+            }
+        ]
+    },
+    {
+        "name": "Sports Event 49",
+        "city": "Glasgow",
+        "category": "Sports",
+        "date": "2025-03-15",
+        "price": 42.55,
+        "available_seats": 30,
+        "tags": [
+            "sports",
+            "fitness",
+            "competition"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -4.2518,
+                55.8642
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 200,
+                "comment": "Loved it!",
+                "rating": 4,
+                "date": "2025-06-05"
+            },
+            {
+                "user_id": 261,
+                "comment": "Great event!",
+                "rating": 3,
+                "date": "2025-10-27"
+            }
+        ]
+    },
+    {
+        "name": "Food & Drink Event 50",
+        "city": "Nottingham",
+        "category": "Food & Drink",
+        "date": "2025-12-03",
+        "price": 88.92,
+        "available_seats": 172,
+        "tags": [
+            "food & drink",
+            "tasting",
+            "local"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.1496,
+                52.9548
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 199,
+                "comment": "Had a great time!",
+                "rating": 4,
+                "date": "2025-09-11"
+            },
+            {
+                "user_id": 138,
+                "comment": "Very well organized.",
+                "rating": 5,
+                "date": "2025-11-13"
+            }
+        ]
+    },
+    {
+        "name": "Music Event 51",
+        "city": "Birmingham",
+        "category": "Music",
+        "date": "2025-09-20",
+        "price": 63.97,
+        "available_seats": 199,
+        "tags": [
+            "music",
+            "live",
+            "local"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.8904,
+                52.4862
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 229,
+                "comment": "Great event!",
+                "rating": 5,
+                "date": "2025-09-16"
+            },
+            {
+                "user_id": 245,
+                "comment": "Had a great time!",
+                "rating": 3,
+                "date": "2025-12-18"
+            }
+        ]
+    },
+    {
+        "name": "Technology Event 52",
+        "city": "Cardiff",
+        "category": "Technology",
+        "date": "2025-02-13",
+        "price": 7.93,
+        "available_seats": 54,
+        "tags": [
+            "technology",
+            "innovation",
+            "talks"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -3.1791,
+                51.4816
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 263,
+                "comment": "Very well organized.",
+                "rating": 3,
+                "date": "2025-07-12"
+            },
+            {
+                "user_id": 215,
+                "comment": "Amazing experience!",
+                "rating": 3,
+                "date": "2025-11-18"
+            }
+        ]
+    },
+    {
+        "name": "Business & Networking Event 53",
+        "city": "London",
+        "category": "Business & Networking",
+        "date": "2025-12-15",
+        "price": 27.99,
+        "available_seats": 87,
+        "tags": [
+            "business",
+            "networking",
+            "startup"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1276,
+                51.5072
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 100,
+                "comment": "Could be better.",
+                "rating": 3,
+                "date": "2025-09-15"
+            },
+            {
+                "user_id": 237,
+                "comment": "Loved it!",
+                "rating": 5,
+                "date": "2025-09-27"
+            }
+        ]
+    },
+    {
+        "name": "Education & Workshops Event 54",
+        "city": "Manchester",
+        "category": "Education & Workshops",
+        "date": "2025-05-10",
+        "price": 81.07,
+        "available_seats": 87,
+        "tags": [
+            "education",
+            "workshop",
+            "skills"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -2.2426,
+                53.4808
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 160,
+                "comment": "Would attend again!",
+                "rating": 3,
+                "date": "2025-04-29"
+            },
+            {
+                "user_id": 289,
+                "comment": "Would attend again!",
+                "rating": 4,
+                "date": "2025-09-10"
+            }
+        ]
+    },
+    {
+        "name": "Sports Event 55",
+        "city": "Bristol",
+        "category": "Sports",
+        "date": "2025-09-03",
+        "price": 90.58,
+        "available_seats": 93,
+        "tags": [
+            "sports",
+            "fitness",
+            "competition"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -2.5879,
+                51.4545
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 296,
+                "comment": "Loved it!",
+                "rating": 5,
+                "date": "2025-11-20"
+            },
+            {
+                "user_id": 264,
+                "comment": "Great event!",
+                "rating": 3,
+                "date": "2025-11-04"
+            }
+        ]
+    },
+    {
+        "name": "Comedy Event 56",
+        "city": "Birmingham",
+        "category": "Comedy",
+        "date": "2025-05-11",
+        "price": 66.24,
+        "available_seats": 197,
+        "tags": [
+            "comedy",
+            "standup",
+            "fun"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.8904,
+                52.4862
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 177,
+                "comment": "Amazing experience!",
+                "rating": 5,
+                "date": "2025-03-10"
+            },
+            {
+                "user_id": 103,
+                "comment": "Could be better.",
+                "rating": 3,
+                "date": "2025-09-06"
+            }
+        ]
+    },
+    {
+        "name": "Sports Event 57",
+        "city": "Glasgow",
+        "category": "Sports",
+        "date": "2025-12-21",
+        "price": 25.46,
+        "available_seats": 145,
+        "tags": [
+            "sports",
+            "fitness",
+            "competition"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -4.2518,
+                55.8642
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 174,
+                "comment": "Would attend again!",
+                "rating": 5,
+                "date": "2025-05-27"
+            },
+            {
+                "user_id": 218,
+                "comment": "Could be better.",
+                "rating": 4,
+                "date": "2025-03-02"
+            }
+        ]
+    },
+    {
+        "name": "Technology Event 58",
+        "city": "Nottingham",
+        "category": "Technology",
+        "date": "2025-06-09",
+        "price": 96.94,
+        "available_seats": 141,
+        "tags": [
+            "technology",
+            "innovation",
+            "talks"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.1496,
+                52.9548
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 104,
+                "comment": "Very well organized.",
+                "rating": 4,
+                "date": "2025-02-09"
+            },
+            {
+                "user_id": 229,
+                "comment": "Could be better.",
+                "rating": 4,
+                "date": "2025-07-18"
+            }
+        ]
+    },
+    {
+        "name": "Technology Event 59",
+        "city": "Leeds",
+        "category": "Technology",
+        "date": "2025-02-08",
+        "price": 59.66,
+        "available_seats": 56,
+        "tags": [
+            "technology",
+            "innovation",
+            "talks"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.5491,
+                53.8008
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 291,
+                "comment": "Amazing experience!",
+                "rating": 4,
+                "date": "2025-07-04"
+            },
+            {
+                "user_id": 133,
+                "comment": "Amazing experience!",
+                "rating": 5,
+                "date": "2025-09-18"
+            }
+        ]
+    },
+    {
+        "name": "Sports Event 60",
+        "city": "Glasgow",
+        "category": "Sports",
+        "date": "2025-12-27",
+        "price": 39.33,
+        "available_seats": 147,
+        "tags": [
+            "sports",
+            "fitness",
+            "competition"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -4.2518,
+                55.8642
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 224,
+                "comment": "Could be better.",
+                "rating": 3,
+                "date": "2025-03-23"
+            },
+            {
+                "user_id": 100,
+                "comment": "Could be better.",
+                "rating": 5,
+                "date": "2025-08-19"
+            }
+        ]
+    },
+    {
+        "name": "Art & Culture Event 61",
+        "city": "Bristol",
+        "category": "Art & Culture",
+        "date": "2025-03-14",
+        "price": 44.12,
+        "available_seats": 116,
+        "tags": [
+            "art & culture",
+            "gallery",
+            "creative"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -2.5879,
+                51.4545
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 180,
+                "comment": "Loved it!",
+                "rating": 4,
+                "date": "2025-01-01"
+            },
+            {
+                "user_id": 183,
+                "comment": "Had a great time!",
+                "rating": 4,
+                "date": "2025-07-23"
+            }
+        ]
+    },
+    {
+        "name": "Technology Event 62",
+        "city": "Manchester",
+        "category": "Technology",
+        "date": "2025-01-07",
+        "price": 89.75,
+        "available_seats": 94,
+        "tags": [
+            "technology",
+            "innovation",
+            "talks"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -2.2426,
+                53.4808
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 164,
+                "comment": "Very well organized.",
+                "rating": 3,
+                "date": "2025-07-21"
+            },
+            {
+                "user_id": 199,
+                "comment": "Had a great time!",
+                "rating": 5,
+                "date": "2025-02-09"
+            }
+        ]
+    },
+    {
+        "name": "Fitness Event 63",
+        "city": "Liverpool",
+        "category": "Fitness",
+        "date": "2025-05-21",
+        "price": 85.3,
+        "available_seats": 91,
+        "tags": [
+            "fitness",
+            "wellness",
+            "outdoors"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -2.9779,
+                53.4084
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 126,
+                "comment": "Loved it!",
+                "rating": 5,
+                "date": "2025-05-27"
+            },
+            {
+                "user_id": 262,
+                "comment": "Great event!",
+                "rating": 3,
+                "date": "2025-05-17"
+            }
+        ]
+    },
+    {
+        "name": "Business & Networking Event 64",
+        "city": "Bristol",
+        "category": "Business & Networking",
+        "date": "2025-06-11",
+        "price": 22.85,
+        "available_seats": 115,
+        "tags": [
+            "business",
+            "networking",
+            "startup"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -2.5879,
+                51.4545
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 300,
+                "comment": "Could be better.",
+                "rating": 3,
+                "date": "2025-11-20"
+            },
+            {
+                "user_id": 202,
+                "comment": "Amazing experience!",
+                "rating": 5,
+                "date": "2025-04-15"
+            }
+        ]
+    },
+    {
+        "name": "Music Event 65",
+        "city": "Manchester",
+        "category": "Music",
+        "date": "2025-07-30",
+        "price": 47.38,
+        "available_seats": 55,
+        "tags": [
+            "music",
+            "live",
+            "local"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -2.2426,
+                53.4808
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 264,
+                "comment": "Had a great time!",
+                "rating": 4,
+                "date": "2025-09-06"
+            },
+            {
+                "user_id": 112,
+                "comment": "Amazing experience!",
+                "rating": 3,
+                "date": "2025-03-29"
+            }
+        ]
+    },
+    {
+        "name": "Fitness Event 66",
+        "city": "Edinburgh",
+        "category": "Fitness",
+        "date": "2025-06-25",
+        "price": 31.48,
+        "available_seats": 85,
+        "tags": [
+            "fitness",
+            "wellness",
+            "outdoors"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -3.1883,
+                55.9533
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 289,
+                "comment": "Would attend again!",
+                "rating": 5,
+                "date": "2025-05-14"
+            },
+            {
+                "user_id": 203,
+                "comment": "Would attend again!",
+                "rating": 3,
+                "date": "2025-06-04"
+            }
+        ]
+    },
+    {
+        "name": "Business & Networking Event 67",
+        "city": "Edinburgh",
+        "category": "Business & Networking",
+        "date": "2025-12-09",
+        "price": 42.07,
+        "available_seats": 62,
+        "tags": [
+            "business",
+            "networking",
+            "startup"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -3.1883,
+                55.9533
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 264,
+                "comment": "Great event!",
+                "rating": 3,
+                "date": "2025-04-17"
+            },
+            {
+                "user_id": 228,
+                "comment": "Had a great time!",
+                "rating": 4,
+                "date": "2025-10-09"
+            }
+        ]
+    },
+    {
+        "name": "Education & Workshops Event 68",
+        "city": "Leeds",
+        "category": "Education & Workshops",
+        "date": "2025-06-20",
+        "price": 98.67,
+        "available_seats": 135,
+        "tags": [
+            "education",
+            "workshop",
+            "skills"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.5491,
+                53.8008
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 209,
+                "comment": "Great event!",
+                "rating": 5,
+                "date": "2025-04-09"
+            },
+            {
+                "user_id": 162,
+                "comment": "Loved it!",
+                "rating": 3,
+                "date": "2025-06-25"
+            }
+        ]
+    },
+    {
+        "name": "Sports Event 69",
+        "city": "Nottingham",
+        "category": "Sports",
+        "date": "2025-06-13",
+        "price": 27.48,
+        "available_seats": 86,
+        "tags": [
+            "sports",
+            "fitness",
+            "competition"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.1496,
+                52.9548
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 245,
+                "comment": "Great event!",
+                "rating": 3,
+                "date": "2025-07-31"
+            },
+            {
+                "user_id": 198,
+                "comment": "Could be better.",
+                "rating": 5,
+                "date": "2025-09-26"
+            }
+        ]
+    },
+    {
+        "name": "Fitness Event 70",
+        "city": "Leeds",
+        "category": "Fitness",
+        "date": "2025-05-19",
+        "price": 36.79,
+        "available_seats": 35,
+        "tags": [
+            "fitness",
+            "wellness",
+            "outdoors"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.5491,
+                53.8008
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 227,
+                "comment": "Very well organized.",
+                "rating": 5,
+                "date": "2025-07-04"
+            },
+            {
+                "user_id": 132,
+                "comment": "Would attend again!",
+                "rating": 5,
+                "date": "2025-09-28"
+            }
+        ]
+    },
+    {
+        "name": "Sports Event 71",
+        "city": "Leeds",
+        "category": "Sports",
+        "date": "2025-05-19",
+        "price": 89.3,
+        "available_seats": 118,
+        "tags": [
+            "sports",
+            "fitness",
+            "competition"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.5491,
+                53.8008
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 202,
+                "comment": "Would attend again!",
+                "rating": 4,
+                "date": "2025-08-10"
+            },
+            {
+                "user_id": 179,
+                "comment": "Had a great time!",
+                "rating": 3,
+                "date": "2025-03-07"
+            }
+        ]
+    },
+    {
+        "name": "Fitness Event 72",
+        "city": "London",
+        "category": "Fitness",
+        "date": "2025-12-30",
+        "price": 76.79,
+        "available_seats": 141,
+        "tags": [
+            "fitness",
+            "wellness",
+            "outdoors"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1276,
+                51.5072
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 250,
+                "comment": "Could be better.",
+                "rating": 3,
+                "date": "2025-02-07"
+            },
+            {
+                "user_id": 200,
+                "comment": "Had a great time!",
+                "rating": 5,
+                "date": "2025-08-28"
+            }
+        ]
+    },
+    {
+        "name": "Technology Event 73",
+        "city": "Edinburgh",
+        "category": "Technology",
+        "date": "2025-02-25",
+        "price": 26.04,
+        "available_seats": 58,
+        "tags": [
+            "technology",
+            "innovation",
+            "talks"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -3.1883,
+                55.9533
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 233,
+                "comment": "Would attend again!",
+                "rating": 3,
+                "date": "2025-12-25"
+            },
+            {
+                "user_id": 265,
+                "comment": "Had a great time!",
+                "rating": 4,
+                "date": "2025-02-13"
+            }
+        ]
+    },
+    {
+        "name": "Music Event 74",
+        "city": "Nottingham",
+        "category": "Music",
+        "date": "2025-01-01",
+        "price": 78.54,
+        "available_seats": 79,
+        "tags": [
+            "music",
+            "live",
+            "local"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.1496,
+                52.9548
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 245,
+                "comment": "Loved it!",
+                "rating": 5,
+                "date": "2025-06-05"
+            },
+            {
+                "user_id": 132,
+                "comment": "Would attend again!",
+                "rating": 4,
+                "date": "2025-09-28"
+            }
+        ]
+    },
+    {
+        "name": "Sports Event 75",
+        "city": "Bristol",
+        "category": "Sports",
+        "date": "2025-02-20",
+        "price": 11.61,
+        "available_seats": 154,
+        "tags": [
+            "sports",
+            "fitness",
+            "competition"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -2.5879,
+                51.4545
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 249,
+                "comment": "Great event!",
+                "rating": 4,
+                "date": "2025-05-14"
+            },
+            {
+                "user_id": 157,
+                "comment": "Had a great time!",
+                "rating": 5,
+                "date": "2025-01-01"
+            }
+        ]
+    },
+    {
+        "name": "Business & Networking Event 76",
+        "city": "London",
+        "category": "Business & Networking",
+        "date": "2025-06-04",
+        "price": 98.66,
+        "available_seats": 91,
+        "tags": [
+            "business",
+            "networking",
+            "startup"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1276,
+                51.5072
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 180,
+                "comment": "Would attend again!",
+                "rating": 3,
+                "date": "2025-09-01"
+            },
+            {
+                "user_id": 234,
+                "comment": "Great event!",
+                "rating": 5,
+                "date": "2025-05-07"
+            }
+        ]
+    },
+    {
+        "name": "Fitness Event 77",
+        "city": "London",
+        "category": "Fitness",
+        "date": "2025-12-27",
+        "price": 66.07,
+        "available_seats": 34,
+        "tags": [
+            "fitness",
+            "wellness",
+            "outdoors"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1276,
+                51.5072
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 105,
+                "comment": "Great event!",
+                "rating": 4,
+                "date": "2025-12-12"
+            },
+            {
+                "user_id": 265,
+                "comment": "Could be better.",
+                "rating": 3,
+                "date": "2025-05-12"
+            }
+        ]
+    },
+    {
+        "name": "Fitness Event 78",
+        "city": "Leeds",
+        "category": "Fitness",
+        "date": "2025-07-09",
+        "price": 26.32,
+        "available_seats": 28,
+        "tags": [
+            "fitness",
+            "wellness",
+            "outdoors"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.5491,
+                53.8008
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 278,
+                "comment": "Very well organized.",
+                "rating": 5,
+                "date": "2025-08-04"
+            },
+            {
+                "user_id": 192,
+                "comment": "Would attend again!",
+                "rating": 4,
+                "date": "2025-04-12"
+            }
+        ]
+    },
+    {
+        "name": "Art & Culture Event 79",
+        "city": "London",
+        "category": "Art & Culture",
+        "date": "2025-09-16",
+        "price": 11.34,
+        "available_seats": 146,
+        "tags": [
+            "art & culture",
+            "gallery",
+            "creative"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1276,
+                51.5072
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 151,
+                "comment": "Very well organized.",
+                "rating": 3,
+                "date": "2025-04-29"
+            },
+            {
+                "user_id": 219,
+                "comment": "Great event!",
+                "rating": 4,
+                "date": "2025-06-01"
+            }
+        ]
+    },
+    {
+        "name": "Film & Media Event 80",
+        "city": "Manchester",
+        "category": "Film & Media",
+        "date": "2025-09-11",
+        "price": 62.35,
+        "available_seats": 77,
+        "tags": [
+            "film",
+            "screening",
+            "media"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -2.2426,
+                53.4808
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 224,
+                "comment": "Could be better.",
+                "rating": 5,
+                "date": "2025-01-29"
+            },
+            {
+                "user_id": 252,
+                "comment": "Great event!",
+                "rating": 4,
+                "date": "2025-01-28"
+            }
+        ]
+    },
+    {
+        "name": "Music Event 81",
+        "city": "Leeds",
+        "category": "Music",
+        "date": "2025-11-02",
+        "price": 18.34,
+        "available_seats": 33,
+        "tags": [
+            "music",
+            "live",
+            "local"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.5491,
+                53.8008
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 281,
+                "comment": "Loved it!",
+                "rating": 3,
+                "date": "2025-07-21"
+            },
+            {
+                "user_id": 215,
+                "comment": "Would attend again!",
+                "rating": 4,
+                "date": "2025-02-27"
+            }
+        ]
+    },
+    {
+        "name": "Food & Drink Event 82",
+        "city": "Manchester",
+        "category": "Food & Drink",
+        "date": "2025-06-18",
+        "price": 22.92,
+        "available_seats": 187,
+        "tags": [
+            "food & drink",
+            "tasting",
+            "local"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -2.2426,
+                53.4808
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 234,
+                "comment": "Would attend again!",
+                "rating": 4,
+                "date": "2025-01-17"
+            },
+            {
+                "user_id": 179,
+                "comment": "Would attend again!",
+                "rating": 5,
+                "date": "2025-07-13"
+            }
+        ]
+    },
+    {
+        "name": "Comedy Event 83",
+        "city": "Liverpool",
+        "category": "Comedy",
+        "date": "2025-08-15",
+        "price": 20.91,
+        "available_seats": 20,
+        "tags": [
+            "comedy",
+            "standup",
+            "fun"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -2.9779,
+                53.4084
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 120,
+                "comment": "Very well organized.",
+                "rating": 3,
+                "date": "2025-06-29"
+            },
+            {
+                "user_id": 207,
+                "comment": "Loved it!",
+                "rating": 5,
+                "date": "2025-04-17"
+            }
+        ]
+    },
+    {
+        "name": "Comedy Event 84",
+        "city": "Bristol",
+        "category": "Comedy",
+        "date": "2025-06-08",
+        "price": 82.27,
+        "available_seats": 130,
+        "tags": [
+            "comedy",
+            "standup",
+            "fun"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -2.5879,
+                51.4545
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 122,
+                "comment": "Loved it!",
+                "rating": 5,
+                "date": "2025-08-31"
+            },
+            {
+                "user_id": 150,
+                "comment": "Very well organized.",
+                "rating": 5,
+                "date": "2025-08-17"
+            }
+        ]
+    },
+    {
+        "name": "Comedy Event 85",
+        "city": "Leeds",
+        "category": "Comedy",
+        "date": "2025-07-06",
+        "price": 74.31,
+        "available_seats": 141,
+        "tags": [
+            "comedy",
+            "standup",
+            "fun"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.5491,
+                53.8008
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 107,
+                "comment": "Would attend again!",
+                "rating": 4,
+                "date": "2025-05-07"
+            },
+            {
+                "user_id": 260,
+                "comment": "Had a great time!",
+                "rating": 4,
+                "date": "2025-01-21"
+            }
+        ]
+    },
+    {
+        "name": "Music Event 86",
+        "city": "Bristol",
+        "category": "Music",
+        "date": "2025-08-26",
+        "price": 10.88,
+        "available_seats": 35,
+        "tags": [
+            "music",
+            "live",
+            "local"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -2.5879,
+                51.4545
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 165,
+                "comment": "Great event!",
+                "rating": 5,
+                "date": "2025-02-02"
+            },
+            {
+                "user_id": 255,
+                "comment": "Very well organized.",
+                "rating": 4,
+                "date": "2025-05-20"
+            }
+        ]
+    },
+    {
+        "name": "Film & Media Event 87",
+        "city": "Liverpool",
+        "category": "Film & Media",
+        "date": "2025-01-23",
+        "price": 29.64,
+        "available_seats": 196,
+        "tags": [
+            "film",
+            "screening",
+            "media"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -2.9779,
+                53.4084
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 181,
+                "comment": "Very well organized.",
+                "rating": 4,
+                "date": "2025-01-02"
+            },
+            {
+                "user_id": 284,
+                "comment": "Had a great time!",
+                "rating": 5,
+                "date": "2025-11-21"
+            }
+        ]
+    },
+    {
+        "name": "Music Event 88",
+        "city": "Manchester",
+        "category": "Music",
+        "date": "2025-04-30",
+        "price": 15.08,
+        "available_seats": 139,
+        "tags": [
+            "music",
+            "live",
+            "local"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -2.2426,
+                53.4808
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 298,
+                "comment": "Could be better.",
+                "rating": 4,
+                "date": "2025-08-09"
+            },
+            {
+                "user_id": 226,
+                "comment": "Great event!",
+                "rating": 4,
+                "date": "2025-04-04"
+            }
+        ]
+    },
+    {
+        "name": "Art & Culture Event 89",
+        "city": "London",
+        "category": "Art & Culture",
+        "date": "2025-12-21",
+        "price": 77.64,
+        "available_seats": 175,
+        "tags": [
+            "art & culture",
+            "gallery",
+            "creative"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1276,
+                51.5072
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 160,
+                "comment": "Very well organized.",
+                "rating": 4,
+                "date": "2025-08-24"
+            },
+            {
+                "user_id": 192,
+                "comment": "Had a great time!",
+                "rating": 5,
+                "date": "2025-02-10"
+            }
+        ]
+    },
+    {
+        "name": "Technology Event 90",
+        "city": "Nottingham",
+        "category": "Technology",
+        "date": "2025-07-20",
+        "price": 75.77,
+        "available_seats": 83,
+        "tags": [
+            "technology",
+            "innovation",
+            "talks"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.1496,
+                52.9548
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 204,
+                "comment": "Loved it!",
+                "rating": 5,
+                "date": "2025-01-18"
+            },
+            {
+                "user_id": 223,
+                "comment": "Amazing experience!",
+                "rating": 5,
+                "date": "2025-06-16"
+            }
+        ]
+    },
+    {
+        "name": "Fitness Event 91",
+        "city": "Birmingham",
+        "category": "Fitness",
+        "date": "2025-02-23",
+        "price": 97.86,
+        "available_seats": 87,
+        "tags": [
+            "fitness",
+            "wellness",
+            "outdoors"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.8904,
+                52.4862
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 259,
+                "comment": "Loved it!",
+                "rating": 3,
+                "date": "2025-02-19"
+            },
+            {
+                "user_id": 207,
+                "comment": "Could be better.",
+                "rating": 5,
+                "date": "2025-08-17"
+            }
+        ]
+    },
+    {
+        "name": "Technology Event 92",
+        "city": "Birmingham",
+        "category": "Technology",
+        "date": "2025-03-10",
+        "price": 44.18,
+        "available_seats": 178,
+        "tags": [
+            "technology",
+            "innovation",
+            "talks"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.8904,
+                52.4862
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 272,
+                "comment": "Great event!",
+                "rating": 5,
+                "date": "2025-10-03"
+            },
+            {
+                "user_id": 298,
+                "comment": "Would attend again!",
+                "rating": 3,
+                "date": "2025-05-31"
+            }
+        ]
+    },
+    {
+        "name": "Art & Culture Event 93",
+        "city": "Glasgow",
+        "category": "Art & Culture",
+        "date": "2025-10-18",
+        "price": 30.16,
+        "available_seats": 85,
+        "tags": [
+            "art & culture",
+            "gallery",
+            "creative"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -4.2518,
+                55.8642
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 288,
+                "comment": "Very well organized.",
+                "rating": 3,
+                "date": "2025-08-13"
+            },
+            {
+                "user_id": 163,
+                "comment": "Great event!",
+                "rating": 3,
+                "date": "2025-05-01"
+            }
+        ]
+    },
+    {
+        "name": "Art & Culture Event 94",
+        "city": "Birmingham",
+        "category": "Art & Culture",
+        "date": "2025-10-24",
+        "price": 22.7,
+        "available_seats": 36,
+        "tags": [
+            "art & culture",
+            "gallery",
+            "creative"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.8904,
+                52.4862
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 201,
+                "comment": "Very well organized.",
+                "rating": 3,
+                "date": "2025-09-17"
+            },
+            {
+                "user_id": 234,
+                "comment": "Great event!",
+                "rating": 5,
+                "date": "2025-02-21"
+            }
+        ]
+    },
+    {
+        "name": "Music Event 95",
+        "city": "Edinburgh",
+        "category": "Music",
+        "date": "2025-02-22",
+        "price": 5.42,
+        "available_seats": 79,
+        "tags": [
+            "music",
+            "live",
+            "local"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -3.1883,
+                55.9533
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 214,
+                "comment": "Very well organized.",
+                "rating": 3,
+                "date": "2025-05-31"
+            },
+            {
+                "user_id": 159,
+                "comment": "Loved it!",
+                "rating": 3,
+                "date": "2025-04-08"
+            }
+        ]
+    },
+    {
+        "name": "Film & Media Event 96",
+        "city": "Cardiff",
+        "category": "Film & Media",
+        "date": "2025-04-10",
+        "price": 92.44,
+        "available_seats": 115,
+        "tags": [
+            "film",
+            "screening",
+            "media"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -3.1791,
+                51.4816
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 231,
+                "comment": "Had a great time!",
+                "rating": 3,
+                "date": "2025-08-18"
+            },
+            {
+                "user_id": 254,
+                "comment": "Very well organized.",
+                "rating": 5,
+                "date": "2025-01-04"
+            }
+        ]
+    },
+    {
+        "name": "Film & Media Event 97",
+        "city": "Manchester",
+        "category": "Film & Media",
+        "date": "2025-12-30",
+        "price": 63.28,
+        "available_seats": 75,
+        "tags": [
+            "film",
+            "screening",
+            "media"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -2.2426,
+                53.4808
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 109,
+                "comment": "Very well organized.",
+                "rating": 4,
+                "date": "2025-03-14"
+            },
+            {
+                "user_id": 111,
+                "comment": "Great event!",
+                "rating": 4,
+                "date": "2025-01-20"
+            }
+        ]
+    },
+    {
+        "name": "Technology Event 98",
+        "city": "Cardiff",
+        "category": "Technology",
+        "date": "2025-01-06",
+        "price": 81.97,
+        "available_seats": 124,
+        "tags": [
+            "technology",
+            "innovation",
+            "talks"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -3.1791,
+                51.4816
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 273,
+                "comment": "Very well organized.",
+                "rating": 3,
+                "date": "2025-11-14"
+            },
+            {
+                "user_id": 179,
+                "comment": "Loved it!",
+                "rating": 3,
+                "date": "2025-01-17"
+            }
+        ]
+    },
+    {
+        "name": "Business & Networking Event 99",
+        "city": "Edinburgh",
+        "category": "Business & Networking",
+        "date": "2025-09-05",
+        "price": 10.95,
+        "available_seats": 45,
+        "tags": [
+            "business",
+            "networking",
+            "startup"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -3.1883,
+                55.9533
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 201,
+                "comment": "Would attend again!",
+                "rating": 5,
+                "date": "2025-03-21"
+            },
+            {
+                "user_id": 263,
+                "comment": "Amazing experience!",
+                "rating": 3,
+                "date": "2025-12-01"
+            }
+        ]
+    },
+    {
+        "name": "Fitness Event 100",
+        "city": "Birmingham",
+        "category": "Fitness",
+        "date": "2025-12-23",
+        "price": 30.49,
+        "available_seats": 92,
+        "tags": [
+            "fitness",
+            "wellness",
+            "outdoors"
+        ],
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -1.8904,
+                52.4862
+            ]
+        },
+        "reviews": [
+            {
+                "user_id": 270,
+                "comment": "Very well organized.",
+                "rating": 4,
+                "date": "2025-01-27"
+            },
+            {
+                "user_id": 179,
+                "comment": "Would attend again!",
+                "rating": 5,
+                "date": "2025-07-02"
+            }
+        ]
+    }
+]

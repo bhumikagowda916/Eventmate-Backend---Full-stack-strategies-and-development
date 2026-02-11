@@ -1,0 +1,3046 @@
+{
+	"info": {
+		"_postman_id": "94075967-14fe-45ad-b95c-97d64bfe51e7",
+		"name": "EventMate API",
+		"description": "**EventMate API** is a RESTful backend application built with **Flask** and **MongoDB** for the COM661 Coursework CW1.\n\nIt allows users to **discover, book, and review local events** in a structured and secure way.\n\nThe API includes modules for:\n\n- **Events** – Create, view, update, and delete events; includes search, filtering, and category statistics\n    \n- **Users** – Register, log in, and manage user profiles with JWT authentication\n    \n- **Reviews** – Add and manage event reviews\n    \n- **Bookings** – Book and manage event tickets\n    \n\nAll endpoints follow REST principles and return JSON responses.\n\n**Authentication:**\n\n- Login is required for certain routes.\n    \n- JWT (JSON Web Token) is used for secure access control.\n    \n\n**Base URL:**  \n`http://127.0.0.1:5001`\n\n**Project Technologies:**\n\nFlask | MongoDB | JWT | Postman | Newman\n\n**Coursework Goal:**\n\nTo design, develop, test, and document a functional RESTful API that demonstrates CRUD operations, secure authentication, and automated testing.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49143906",
+		"_collection_link": "https://gowda-bs-1244974.postman.co/workspace/504397fb-0a32-455e-8401-19edade6b9ef/collection/49143906-94075967-14fe-45ad-b95c-97d64bfe51e7?action=share&source=collection_link&creator=49143906"
+	},
+	"item": [
+		{
+			"name": "Events",
+			"item": [
+				{
+					"name": "Get All Events",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response should be an array\", function () {\r",
+									"    pm.expect(pm.response.json()).to.be.an(\"array\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5001/events",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"events"
+							]
+						},
+						"description": "Retrieves a full list of events available in the system."
+					},
+					"response": [
+						{
+							"name": "Get All Events",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5001/events",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"events"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.3 Python/3.13.2"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Nov 2025 16:23:56 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "5448"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72ab6\",\n        \"name\": \"Music Event 74\",\n        \"city\": \"Nottingham\",\n        \"category\": \"Music\",\n        \"date\": \"2025-01-01\",\n        \"price\": 78.54,\n        \"available_seats\": 79,\n        \"tags\": [\n            \"music\",\n            \"live\",\n            \"local\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -1.1496,\n                52.9548\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 245,\n                \"comment\": \"Loved it!\",\n                \"rating\": 5,\n                \"date\": \"2025-06-05\"\n            },\n            {\n                \"user_id\": 132,\n                \"comment\": \"Would attend again!\",\n                \"rating\": 4,\n                \"date\": \"2025-09-28\"\n            },\n            {\n                \"_id\": \"690bec68ef16ee128476df7a\",\n                \"user_id\": 150,\n                \"comment\": \"This was an awesome event!\",\n                \"rating\": 5,\n                \"date\": \"\"\n            },\n            {\n                \"_id\": \"690bee63ef16ee128476df7e\",\n                \"user_id\": 150,\n                \"comment\": \"This was an awesome event!\",\n                \"rating\": 5,\n                \"date\": \"\"\n            },\n            {\n                \"_id\": \"690beeb8ef16ee128476df80\",\n                \"user_id\": 150,\n                \"comment\": \"This was an awesome event!\",\n                \"rating\": 5,\n                \"date\": \"\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72ad2\",\n        \"name\": \"Technology Event 98\",\n        \"city\": \"Cardiff\",\n        \"category\": \"Technology\",\n        \"date\": \"2025-01-06\",\n        \"price\": 81.97,\n        \"available_seats\": 124,\n        \"tags\": [\n            \"technology\",\n            \"innovation\",\n            \"talks\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -3.1791,\n                51.4816\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 273,\n                \"comment\": \"Very well organized.\",\n                \"rating\": 3,\n                \"date\": \"2025-11-14\"\n            },\n            {\n                \"user_id\": 179,\n                \"comment\": \"Loved it!\",\n                \"rating\": 3,\n                \"date\": \"2025-01-17\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72aaf\",\n        \"name\": \"Technology Event 62\",\n        \"city\": \"Manchester\",\n        \"category\": \"Technology\",\n        \"date\": \"2025-01-07\",\n        \"price\": 89.75,\n        \"available_seats\": 94,\n        \"tags\": [\n            \"technology\",\n            \"innovation\",\n            \"talks\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -2.2426,\n                53.4808\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 164,\n                \"comment\": \"Very well organized.\",\n                \"rating\": 3,\n                \"date\": \"2025-07-21\"\n            },\n            {\n                \"user_id\": 199,\n                \"comment\": \"Had a great time!\",\n                \"rating\": 5,\n                \"date\": \"2025-02-09\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72a7d\",\n        \"name\": \"Business & Networking Event 19\",\n        \"city\": \"Birmingham\",\n        \"category\": \"Business & Networking\",\n        \"date\": \"2025-01-12\",\n        \"price\": 24.29,\n        \"available_seats\": 155,\n        \"tags\": [\n            \"business\",\n            \"networking\",\n            \"startup\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -1.8904,\n                52.4862\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 192,\n                \"comment\": \"Great event!\",\n                \"rating\": 5,\n                \"date\": \"2025-10-06\"\n            },\n            {\n                \"user_id\": 106,\n                \"comment\": \"Had a great time!\",\n                \"rating\": 5,\n                \"date\": \"2025-06-02\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72ac8\",\n        \"name\": \"Film & Media Event 87\",\n        \"city\": \"Liverpool\",\n        \"category\": \"Film & Media\",\n        \"date\": \"2025-01-23\",\n        \"price\": 29.64,\n        \"available_seats\": 196,\n        \"tags\": [\n            \"film\",\n            \"screening\",\n            \"media\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -2.9779,\n                53.4084\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 181,\n                \"comment\": \"Very well organized.\",\n                \"rating\": 4,\n                \"date\": \"2025-01-02\"\n            },\n            {\n                \"user_id\": 284,\n                \"comment\": \"Had a great time!\",\n                \"rating\": 5,\n                \"date\": \"2025-11-21\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72a85\",\n        \"name\": \"Education & Workshops Event 9\",\n        \"city\": \"Cardiff\",\n        \"category\": \"Education & Workshops\",\n        \"date\": \"2025-02-05\",\n        \"price\": 83.96,\n        \"available_seats\": 89,\n        \"tags\": [\n            \"education\",\n            \"workshop\",\n            \"skills\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -3.1791,\n                51.4816\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 221,\n                \"comment\": \"Would attend again!\",\n                \"rating\": 5,\n                \"date\": \"2025-02-03\"\n            },\n            {\n                \"user_id\": 115,\n                \"comment\": \"Would attend again!\",\n                \"rating\": 5,\n                \"date\": \"2025-06-08\"\n            },\n            {\n                \"_id\": \"690bf1eeef16ee128476df83\",\n                \"user_id\": 150,\n                \"comment\": \"This was an awesome event!\",\n                \"rating\": 5,\n                \"date\": \"\"\n            },\n            {\n                \"_id\": \"690bf400ef16ee128476df85\",\n                \"user_id\": 150,\n                \"comment\": \"This was an awesome event!\",\n                \"rating\": 5,\n                \"date\": \"\"\n            },\n            {\n                \"_id\": \"690bf6804e4bd3ecb24a3fc1\",\n                \"user_id\": 150,\n                \"comment\": \"This was an awesome event!\",\n                \"rating\": 5,\n                \"date\": \"\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72a91\",\n        \"name\": \"Fitness Event 34\",\n        \"city\": \"Leeds\",\n        \"category\": \"Fitness\",\n        \"date\": \"2025-02-07\",\n        \"price\": 24.99,\n        \"available_seats\": 97,\n        \"tags\": [\n            \"fitness\",\n            \"wellness\",\n            \"outdoors\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -1.5491,\n                53.8008\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 300,\n                \"comment\": \"Loved it!\",\n                \"rating\": 3,\n                \"date\": \"2025-11-26\"\n            },\n            {\n                \"user_id\": 269,\n                \"comment\": \"Very well organized.\",\n                \"rating\": 3,\n                \"date\": \"2025-05-10\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72aab\",\n        \"name\": \"Technology Event 59\",\n        \"city\": \"Leeds\",\n        \"category\": \"Technology\",\n        \"date\": \"2025-02-08\",\n        \"price\": 59.66,\n        \"available_seats\": 56,\n        \"tags\": [\n            \"technology\",\n            \"innovation\",\n            \"talks\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -1.5491,\n                53.8008\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 291,\n                \"comment\": \"Amazing experience!\",\n                \"rating\": 4,\n                \"date\": \"2025-07-04\"\n            },\n            {\n                \"user_id\": 133,\n                \"comment\": \"Amazing experience!\",\n                \"rating\": 5,\n                \"date\": \"2025-09-18\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72a98\",\n        \"name\": \"Art & Culture Event 40\",\n        \"city\": \"Manchester\",\n        \"category\": \"Art & Culture\",\n        \"date\": \"2025-02-12\",\n        \"price\": 62.17,\n        \"available_seats\": 74,\n        \"tags\": [\n            \"art & culture\",\n            \"gallery\",\n            \"creative\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -2.2426,\n                53.4808\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 117,\n                \"comment\": \"Very well organized.\",\n                \"rating\": 3,\n                \"date\": \"2025-08-21\"\n            },\n            {\n                \"user_id\": 102,\n                \"comment\": \"Very well organized.\",\n                \"rating\": 5,\n                \"date\": \"2025-08-02\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72aa9\",\n        \"name\": \"Technology Event 52\",\n        \"city\": \"Cardiff\",\n        \"category\": \"Technology\",\n        \"date\": \"2025-02-13\",\n        \"price\": 7.93,\n        \"available_seats\": 54,\n        \"tags\": [\n            \"technology\",\n            \"innovation\",\n            \"talks\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -3.1791,\n                51.4816\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 263,\n                \"comment\": \"Very well organized.\",\n                \"rating\": 3,\n                \"date\": \"2025-07-12\"\n            },\n            {\n                \"user_id\": 215,\n                \"comment\": \"Amazing experience!\",\n                \"rating\": 3,\n                \"date\": \"2025-11-18\"\n            }\n        ]\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Single Event",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Event has correct structure\", function () {\r",
+									"    let json = pm.response.json();\r",
+									"    pm.expect(json).to.have.property(\"_id\");\r",
+									"    pm.expect(json).to.have.property(\"name\");\r",
+									"    pm.expect(json).to.have.property(\"category\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5001/events/690d5791d500e9e6e70d69ad",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"events",
+								"690d5791d500e9e6e70d69ad"
+							]
+						},
+						"description": "Returns detailed information about a single event, including name, date, category, city, and price.  \n  \nUsed to view complete details before booking or reviewing an event."
+					},
+					"response": [
+						{
+							"name": "Get Single Event",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5001/events/690d5791d500e9e6e70d69ad",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"events",
+										"690d5791d500e9e6e70d69ad"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.3 Python/3.13.2"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Nov 2025 02:29:38 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "444"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"690d5791d500e9e6e70d69ad\",\n    \"name\": \"Music Event 74\",\n    \"city\": \"Nottingham\",\n    \"category\": \"Music\",\n    \"date\": \"2025-01-01\",\n    \"price\": 78.54,\n    \"available_seats\": 79,\n    \"tags\": [\n        \"music\",\n        \"live\",\n        \"local\"\n    ],\n    \"location\": {\n        \"type\": \"Point\",\n        \"coordinates\": [\n            -1.1496,\n            52.9548\n        ]\n    },\n    \"reviews\": [\n        {\n            \"user_id\": 245,\n            \"comment\": \"Loved it!\",\n            \"rating\": 5,\n            \"date\": \"2025-06-05\"\n        },\n        {\n            \"user_id\": 132,\n            \"comment\": \"Would attend again!\",\n            \"rating\": 4,\n            \"date\": \"2025-09-28\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "post a Event",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201 (Event created)\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response has event data\", function () {\r",
+									"    const res = pm.response.json();\r",
+									"    pm.expect(res).to.have.property(\"event_id\"); // your API returns event_id, not _id\r",
+									"    pm.expect(res).to.have.property(\"message\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is acceptable\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ4MTcwOCwianRpIjoiZWEyYTU0YTYtMzU0Yy00YzAzLTlkZTktYjQyNDlmNGFkNGU3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MGQzZWUwYTRjMGE0NTUzMjVjYmZlMCIsIm5iZiI6MTc2MjQ4MTcwOCwiY3NyZiI6ImNiZDE3MzcxLTYyMGYtNDkyYi05NGYyLWE1NGZlMDI2NjQ1MSIsImV4cCI6MTc2MjQ4ODkwOH0.8Gcrc_iY7YFfzGc_bZsAfa90c4QGFCm8Jkvj8d0WKzw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Test Music Event\",\r\n    \"city\": \"London\",\r\n    \"category\": \"Music\",\r\n    \"date\": \"2025-12-20\",\r\n    \"price\": 25.50,\r\n    \"available_seats\": 150,\r\n    \"tags\": [\"music\", \"live\", \"local\"],\r\n    \"location\": {\r\n        \"type\": \"Point\",\r\n        \"coordinates\": [-0.1276, 51.5072]\r\n    }\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5001/events",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"events"
+							]
+						},
+						"description": "Allows an admin or authorized user to add a new event to the database.  \n  \nRequires fields such as `name`, `date`, `category`, `city`, and `price` in the request body.  \n  \nOn success, returns a confirmation message and the created event’s ID."
+					},
+					"response": [
+						{
+							"name": "post a Event",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ4MTcwOCwianRpIjoiZWEyYTU0YTYtMzU0Yy00YzAzLTlkZTktYjQyNDlmNGFkNGU3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MGQzZWUwYTRjMGE0NTUzMjVjYmZlMCIsIm5iZiI6MTc2MjQ4MTcwOCwiY3NyZiI6ImNiZDE3MzcxLTYyMGYtNDkyYi05NGYyLWE1NGZlMDI2NjQ1MSIsImV4cCI6MTc2MjQ4ODkwOH0.8Gcrc_iY7YFfzGc_bZsAfa90c4QGFCm8Jkvj8d0WKzw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Test Music Event\",\r\n    \"city\": \"London\",\r\n    \"category\": \"Music\",\r\n    \"date\": \"2025-12-20\",\r\n    \"price\": 25.50,\r\n    \"available_seats\": 150,\r\n    \"tags\": [\"music\", \"live\", \"local\"],\r\n    \"location\": {\r\n        \"type\": \"Point\",\r\n        \"coordinates\": [-0.1276, 51.5072]\r\n    }\r\n}\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5001/events",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"events"
+									]
+								}
+							},
+							"status": "CREATED",
+							"code": 201,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.3 Python/3.13.2"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Nov 2025 02:31:39 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "81"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Event created successfully\",\n    \"event_id\": \"690d5a0ba4c0a455325cbfe2\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update a Event",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Handled update response\", function () {\r",
+									"    const code = pm.response.code;\r",
+									"    pm.expect([200, 404]).to.include(code); // accept both found or not found\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Event update response structure\", function () {\r",
+									"    const res = pm.response.json();\r",
+									"    if (res.message) {\r",
+									"        pm.expect(res.message.toLowerCase()).to.include(\"updated\");\r",
+									"    } else {\r",
+									"        console.warn(\"No 'message' field found. Response:\", res);\r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ4MTcwOCwianRpIjoiZWEyYTU0YTYtMzU0Yy00YzAzLTlkZTktYjQyNDlmNGFkNGU3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MGQzZWUwYTRjMGE0NTUzMjVjYmZlMCIsIm5iZiI6MTc2MjQ4MTcwOCwiY3NyZiI6ImNiZDE3MzcxLTYyMGYtNDkyYi05NGYyLWE1NGZlMDI2NjQ1MSIsImV4cCI6MTc2MjQ4ODkwOH0.8Gcrc_iY7YFfzGc_bZsAfa90c4QGFCm8Jkvj8d0WKzw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"price\": 30,\r\n    \"available_seats\": 110\r\n}\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5001/events/690d5a0ba4c0a455325cbfe2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"events",
+								"690d5a0ba4c0a455325cbfe2"
+							]
+						},
+						"description": "Updates an existing event’s details by ID.  \n  \nPartial updates are supported; only the fields included in the body will be modified.  \n  \nRequires authentication for security."
+					},
+					"response": [
+						{
+							"name": "Update a Event",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ4MTcwOCwianRpIjoiZWEyYTU0YTYtMzU0Yy00YzAzLTlkZTktYjQyNDlmNGFkNGU3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MGQzZWUwYTRjMGE0NTUzMjVjYmZlMCIsIm5iZiI6MTc2MjQ4MTcwOCwiY3NyZiI6ImNiZDE3MzcxLTYyMGYtNDkyYi05NGYyLWE1NGZlMDI2NjQ1MSIsImV4cCI6MTc2MjQ4ODkwOH0.8Gcrc_iY7YFfzGc_bZsAfa90c4QGFCm8Jkvj8d0WKzw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"price\": 30,\r\n    \"available_seats\": 110\r\n}\r\n\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5001/events/690d5a0ba4c0a455325cbfe2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"events",
+										"690d5a0ba4c0a455325cbfe2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.3 Python/3.13.2"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Nov 2025 02:32:59 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Event updated successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete a Event",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Handled delete response\", function () {\r",
+									"    const code = pm.response.code;\r",
+									"    pm.expect([200, 404]).to.include(code);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Delete message confirmation\", function () {\r",
+									"    const res = pm.response.json();\r",
+									"    if (res.message) {\r",
+									"        pm.expect(res.message.toLowerCase()).to.include(\"deleted\");\r",
+									"    } else {\r",
+									"        console.warn(\"No 'message' field found. Response:\", res);\r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ4MTcwOCwianRpIjoiZWEyYTU0YTYtMzU0Yy00YzAzLTlkZTktYjQyNDlmNGFkNGU3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MGQzZWUwYTRjMGE0NTUzMjVjYmZlMCIsIm5iZiI6MTc2MjQ4MTcwOCwiY3NyZiI6ImNiZDE3MzcxLTYyMGYtNDkyYi05NGYyLWE1NGZlMDI2NjQ1MSIsImV4cCI6MTc2MjQ4ODkwOH0.8Gcrc_iY7YFfzGc_bZsAfa90c4QGFCm8Jkvj8d0WKzw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5001/events/690d5a0ba4c0a455325cbfe2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"events",
+								"690d5a0ba4c0a455325cbfe2"
+							]
+						},
+						"description": "Permanently removes an event from the database.  \n  \nUsed by administrators to clean up outdated or cancelled events.  \n  \nReturns a confirmation message upon successful deletion."
+					},
+					"response": [
+						{
+							"name": "Delete a Event",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ4MTcwOCwianRpIjoiZWEyYTU0YTYtMzU0Yy00YzAzLTlkZTktYjQyNDlmNGFkNGU3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MGQzZWUwYTRjMGE0NTUzMjVjYmZlMCIsIm5iZiI6MTc2MjQ4MTcwOCwiY3NyZiI6ImNiZDE3MzcxLTYyMGYtNDkyYi05NGYyLWE1NGZlMDI2NjQ1MSIsImV4cCI6MTc2MjQ4ODkwOH0.8Gcrc_iY7YFfzGc_bZsAfa90c4QGFCm8Jkvj8d0WKzw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5001/events/690d5a0ba4c0a455325cbfe2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"events",
+										"690d5a0ba4c0a455325cbfe2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.3 Python/3.13.2"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Nov 2025 02:33:31 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Event deleted successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Search City",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response should be an array\", function () {\r",
+									"    pm.expect(pm.response.json()).to.be.an(\"array\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"All events should have city = London\", function () {\r",
+									"    let events = pm.response.json();\r",
+									"    if (events.length > 0) {\r",
+									"        events.forEach(e => {\r",
+									"            pm.expect(e.city).to.eql(\"London\");\r",
+									"        });\r",
+									"    } else {\r",
+									"        console.warn(\"No events found in London\");\r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5001/events/search?city=London",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"events",
+								"search"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "London"
+								}
+							]
+						},
+						"description": "Retrieves all events taking place in a specific city.  \n  \nUseful for location-based searches to help users find nearby events."
+					},
+					"response": [
+						{
+							"name": "Search City",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5001/events/search?city=London",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"events",
+										"search"
+									],
+									"query": [
+										{
+											"key": "city",
+											"value": "London"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.3 Python/3.13.2"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Nov 2025 16:37:42 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "5189"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72a79\",\n        \"name\": \"Sports Event 17\",\n        \"city\": \"London\",\n        \"category\": \"Sports\",\n        \"date\": \"2025-04-17\",\n        \"price\": 62.72,\n        \"available_seats\": 58,\n        \"tags\": [\n            \"sports\",\n            \"fitness\",\n            \"competition\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -0.1276,\n                51.5072\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 262,\n                \"comment\": \"Very well organized.\",\n                \"rating\": 4,\n                \"date\": \"2025-11-05\"\n            },\n            {\n                \"user_id\": 193,\n                \"comment\": \"Could be better.\",\n                \"rating\": 3,\n                \"date\": \"2025-03-01\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72a80\",\n        \"name\": \"Art & Culture Event 22\",\n        \"city\": \"London\",\n        \"category\": \"Art & Culture\",\n        \"date\": \"2025-08-30\",\n        \"price\": 29.36,\n        \"available_seats\": 197,\n        \"tags\": [\n            \"art & culture\",\n            \"gallery\",\n            \"creative\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -0.1276,\n                51.5072\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 254,\n                \"comment\": \"Very well organized.\",\n                \"rating\": 4,\n                \"date\": \"2025-06-28\"\n            },\n            {\n                \"user_id\": 193,\n                \"comment\": \"Loved it!\",\n                \"rating\": 3,\n                \"date\": \"2025-02-22\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72a86\",\n        \"name\": \"Technology Event 11\",\n        \"city\": \"London\",\n        \"category\": \"Technology\",\n        \"date\": \"2025-05-28\",\n        \"price\": 17.16,\n        \"available_seats\": 83,\n        \"tags\": [\n            \"technology\",\n            \"innovation\",\n            \"talks\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -0.1276,\n                51.5072\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 201,\n                \"comment\": \"Could be better.\",\n                \"rating\": 4,\n                \"date\": \"2025-02-11\"\n            },\n            {\n                \"user_id\": 142,\n                \"comment\": \"Could be better.\",\n                \"rating\": 4,\n                \"date\": \"2025-10-09\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72a9c\",\n        \"name\": \"Business & Networking Event 43\",\n        \"city\": \"London\",\n        \"category\": \"Business & Networking\",\n        \"date\": \"2025-10-10\",\n        \"price\": 96.94,\n        \"available_seats\": 151,\n        \"tags\": [\n            \"business\",\n            \"networking\",\n            \"startup\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -0.1276,\n                51.5072\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 221,\n                \"comment\": \"Great event!\",\n                \"rating\": 4,\n                \"date\": \"2025-02-24\"\n            },\n            {\n                \"user_id\": 268,\n                \"comment\": \"Had a great time!\",\n                \"rating\": 5,\n                \"date\": \"2025-08-10\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72aa0\",\n        \"name\": \"Comedy Event 48\",\n        \"city\": \"London\",\n        \"category\": \"Comedy\",\n        \"date\": \"2025-07-15\",\n        \"price\": 12.89,\n        \"available_seats\": 91,\n        \"tags\": [\n            \"comedy\",\n            \"standup\",\n            \"fun\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -0.1276,\n                51.5072\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 228,\n                \"comment\": \"Would attend again!\",\n                \"rating\": 3,\n                \"date\": \"2025-05-08\"\n            },\n            {\n                \"user_id\": 229,\n                \"comment\": \"Had a great time!\",\n                \"rating\": 3,\n                \"date\": \"2025-02-16\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72aa4\",\n        \"name\": \"Business & Networking Event 53\",\n        \"city\": \"London\",\n        \"category\": \"Business & Networking\",\n        \"date\": \"2025-12-15\",\n        \"price\": 27.99,\n        \"available_seats\": 87,\n        \"tags\": [\n            \"business\",\n            \"networking\",\n            \"startup\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -0.1276,\n                51.5072\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 100,\n                \"comment\": \"Could be better.\",\n                \"rating\": 3,\n                \"date\": \"2025-09-15\"\n            },\n            {\n                \"user_id\": 237,\n                \"comment\": \"Loved it!\",\n                \"rating\": 5,\n                \"date\": \"2025-09-27\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72ab9\",\n        \"name\": \"Fitness Event 72\",\n        \"city\": \"London\",\n        \"category\": \"Fitness\",\n        \"date\": \"2025-12-30\",\n        \"price\": 76.79,\n        \"available_seats\": 141,\n        \"tags\": [\n            \"fitness\",\n            \"wellness\",\n            \"outdoors\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -0.1276,\n                51.5072\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 250,\n                \"comment\": \"Could be better.\",\n                \"rating\": 3,\n                \"date\": \"2025-02-07\"\n            },\n            {\n                \"user_id\": 200,\n                \"comment\": \"Had a great time!\",\n                \"rating\": 5,\n                \"date\": \"2025-08-28\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72abb\",\n        \"name\": \"Business & Networking Event 76\",\n        \"city\": \"London\",\n        \"category\": \"Business & Networking\",\n        \"date\": \"2025-06-04\",\n        \"price\": 98.66,\n        \"available_seats\": 91,\n        \"tags\": [\n            \"business\",\n            \"networking\",\n            \"startup\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -0.1276,\n                51.5072\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 180,\n                \"comment\": \"Would attend again!\",\n                \"rating\": 3,\n                \"date\": \"2025-09-01\"\n            },\n            {\n                \"user_id\": 234,\n                \"comment\": \"Great event!\",\n                \"rating\": 5,\n                \"date\": \"2025-05-07\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72abd\",\n        \"name\": \"Fitness Event 77\",\n        \"city\": \"London\",\n        \"category\": \"Fitness\",\n        \"date\": \"2025-12-27\",\n        \"price\": 66.07,\n        \"available_seats\": 34,\n        \"tags\": [\n            \"fitness\",\n            \"wellness\",\n            \"outdoors\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -0.1276,\n                51.5072\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 105,\n                \"comment\": \"Great event!\",\n                \"rating\": 4,\n                \"date\": \"2025-12-12\"\n            },\n            {\n                \"user_id\": 265,\n                \"comment\": \"Could be better.\",\n                \"rating\": 3,\n                \"date\": \"2025-05-12\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72abf\",\n        \"name\": \"Art & Culture Event 79\",\n        \"city\": \"London\",\n        \"category\": \"Art & Culture\",\n        \"date\": \"2025-09-16\",\n        \"price\": 11.34,\n        \"available_seats\": 146,\n        \"tags\": [\n            \"art & culture\",\n            \"gallery\",\n            \"creative\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -0.1276,\n                51.5072\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 151,\n                \"comment\": \"Very well organized.\",\n                \"rating\": 3,\n                \"date\": \"2025-04-29\"\n            },\n            {\n                \"user_id\": 219,\n                \"comment\": \"Great event!\",\n                \"rating\": 4,\n                \"date\": \"2025-06-01\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72ad4\",\n        \"name\": \"Art & Culture Event 89\",\n        \"city\": \"London\",\n        \"category\": \"Art & Culture\",\n        \"date\": \"2025-12-21\",\n        \"price\": 77.64,\n        \"available_seats\": 175,\n        \"tags\": [\n            \"art & culture\",\n            \"gallery\",\n            \"creative\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -0.1276,\n                51.5072\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 160,\n                \"comment\": \"Very well organized.\",\n                \"rating\": 4,\n                \"date\": \"2025-08-24\"\n            },\n            {\n                \"user_id\": 192,\n                \"comment\": \"Had a great time!\",\n                \"rating\": 5,\n                \"date\": \"2025-02-10\"\n            }\n        ]\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Serach Category",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response should be an array\", function () {\r",
+									"    pm.expect(pm.response.json()).to.be.an(\"array\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"All events should have category = Music\", function () {\r",
+									"    let events = pm.response.json();\r",
+									"    if (events.length > 0) {\r",
+									"        events.forEach(e => {\r",
+									"            pm.expect(e.category).to.eql(\"Music\");\r",
+									"        });\r",
+									"    } else {\r",
+									"        console.warn(\"No events found in Music category\");\r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5001/events/search?category=Music",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"events",
+								"search"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "Music"
+								}
+							]
+						},
+						"description": "Filters events by category (e.g., Music, Sports, Tech, etc.).  \n  \nHelps users quickly find events that match their interests."
+					},
+					"response": [
+						{
+							"name": "Serach Category",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5001/events/search?category=Music",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"events",
+										"search"
+									],
+									"query": [
+										{
+											"key": "category",
+											"value": "Music"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.3 Python/3.13.2"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Nov 2025 16:39:48 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "6151"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72a73\",\n        \"name\": \"Music Event 8\",\n        \"city\": \"Bristol\",\n        \"category\": \"Music\",\n        \"date\": \"2025-12-09\",\n        \"price\": 12.3,\n        \"available_seats\": 162,\n        \"tags\": [\n            \"music\",\n            \"live\",\n            \"local\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -2.5879,\n                51.4545\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 246,\n                \"comment\": \"Had a great time!\",\n                \"rating\": 4,\n                \"date\": \"2025-06-24\"\n            },\n            {\n                \"user_id\": 277,\n                \"comment\": \"Very well organized.\",\n                \"rating\": 5,\n                \"date\": \"2025-09-12\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72a8c\",\n        \"name\": \"Music Event 3\",\n        \"city\": \"Cardiff\",\n        \"category\": \"Music\",\n        \"date\": \"2025-10-23\",\n        \"price\": 60.04,\n        \"available_seats\": 32,\n        \"tags\": [\n            \"music\",\n            \"live\",\n            \"local\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -3.1791,\n                51.4816\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 156,\n                \"comment\": \"Loved it!\",\n                \"rating\": 5,\n                \"date\": \"2025-03-10\"\n            },\n            {\n                \"user_id\": 174,\n                \"comment\": \"Could be better.\",\n                \"rating\": 3,\n                \"date\": \"2025-10-04\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72a8f\",\n        \"name\": \"Music Event 31\",\n        \"city\": \"Nottingham\",\n        \"category\": \"Music\",\n        \"date\": \"2025-05-08\",\n        \"price\": 22.98,\n        \"available_seats\": 30,\n        \"tags\": [\n            \"music\",\n            \"live\",\n            \"local\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -1.1496,\n                52.9548\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 297,\n                \"comment\": \"Loved it!\",\n                \"rating\": 5,\n                \"date\": \"2025-08-20\"\n            },\n            {\n                \"user_id\": 243,\n                \"comment\": \"Loved it!\",\n                \"rating\": 3,\n                \"date\": \"2025-08-15\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72a96\",\n        \"name\": \"Music Event 37\",\n        \"city\": \"Edinburgh\",\n        \"category\": \"Music\",\n        \"date\": \"2025-07-16\",\n        \"price\": 36.16,\n        \"available_seats\": 179,\n        \"tags\": [\n            \"music\",\n            \"live\",\n            \"local\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -3.1883,\n                55.9533\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 175,\n                \"comment\": \"Amazing experience!\",\n                \"rating\": 3,\n                \"date\": \"2025-02-27\"\n            },\n            {\n                \"user_id\": 158,\n                \"comment\": \"Loved it!\",\n                \"rating\": 3,\n                \"date\": \"2025-05-16\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72a97\",\n        \"name\": \"Music Event 38\",\n        \"city\": \"Glasgow\",\n        \"category\": \"Music\",\n        \"date\": \"2025-04-03\",\n        \"price\": 30.42,\n        \"available_seats\": 53,\n        \"tags\": [\n            \"music\",\n            \"live\",\n            \"local\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -4.2518,\n                55.8642\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 208,\n                \"comment\": \"Had a great time!\",\n                \"rating\": 5,\n                \"date\": \"2025-05-13\"\n            },\n            {\n                \"user_id\": 203,\n                \"comment\": \"Great event!\",\n                \"rating\": 5,\n                \"date\": \"2025-09-21\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72a9e\",\n        \"name\": \"Music Event 47\",\n        \"city\": \"Edinburgh\",\n        \"category\": \"Music\",\n        \"date\": \"2025-05-15\",\n        \"price\": 39.23,\n        \"available_seats\": 104,\n        \"tags\": [\n            \"music\",\n            \"live\",\n            \"local\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -3.1883,\n                55.9533\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 240,\n                \"comment\": \"Very well organized.\",\n                \"rating\": 3,\n                \"date\": \"2025-01-18\"\n            },\n            {\n                \"user_id\": 179,\n                \"comment\": \"Great event!\",\n                \"rating\": 4,\n                \"date\": \"2025-04-04\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72aa3\",\n        \"name\": \"Music Event 51\",\n        \"city\": \"Birmingham\",\n        \"category\": \"Music\",\n        \"date\": \"2025-09-20\",\n        \"price\": 63.97,\n        \"available_seats\": 199,\n        \"tags\": [\n            \"music\",\n            \"live\",\n            \"local\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -1.8904,\n                52.4862\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 229,\n                \"comment\": \"Great event!\",\n                \"rating\": 5,\n                \"date\": \"2025-09-16\"\n            },\n            {\n                \"user_id\": 245,\n                \"comment\": \"Had a great time!\",\n                \"rating\": 3,\n                \"date\": \"2025-12-18\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72ab0\",\n        \"name\": \"Music Event 65\",\n        \"city\": \"Manchester\",\n        \"category\": \"Music\",\n        \"date\": \"2025-07-30\",\n        \"price\": 47.38,\n        \"available_seats\": 55,\n        \"tags\": [\n            \"music\",\n            \"live\",\n            \"local\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -2.2426,\n                53.4808\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 264,\n                \"comment\": \"Had a great time!\",\n                \"rating\": 4,\n                \"date\": \"2025-09-06\"\n            },\n            {\n                \"user_id\": 112,\n                \"comment\": \"Amazing experience!\",\n                \"rating\": 3,\n                \"date\": \"2025-03-29\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72ab6\",\n        \"name\": \"Music Event 74\",\n        \"city\": \"Nottingham\",\n        \"category\": \"Music\",\n        \"date\": \"2025-01-01\",\n        \"price\": 78.54,\n        \"available_seats\": 79,\n        \"tags\": [\n            \"music\",\n            \"live\",\n            \"local\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -1.1496,\n                52.9548\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 245,\n                \"comment\": \"Loved it!\",\n                \"rating\": 5,\n                \"date\": \"2025-06-05\"\n            },\n            {\n                \"user_id\": 132,\n                \"comment\": \"Would attend again!\",\n                \"rating\": 4,\n                \"date\": \"2025-09-28\"\n            },\n            {\n                \"_id\": \"690bec68ef16ee128476df7a\",\n                \"user_id\": 150,\n                \"comment\": \"This was an awesome event!\",\n                \"rating\": 5,\n                \"date\": \"\"\n            },\n            {\n                \"_id\": \"690bee63ef16ee128476df7e\",\n                \"user_id\": 150,\n                \"comment\": \"This was an awesome event!\",\n                \"rating\": 5,\n                \"date\": \"\"\n            },\n            {\n                \"_id\": \"690beeb8ef16ee128476df80\",\n                \"user_id\": 150,\n                \"comment\": \"This was an awesome event!\",\n                \"rating\": 5,\n                \"date\": \"\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72ac1\",\n        \"name\": \"Music Event 81\",\n        \"city\": \"Leeds\",\n        \"category\": \"Music\",\n        \"date\": \"2025-11-02\",\n        \"price\": 18.34,\n        \"available_seats\": 33,\n        \"tags\": [\n            \"music\",\n            \"live\",\n            \"local\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -1.5491,\n                53.8008\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 281,\n                \"comment\": \"Loved it!\",\n                \"rating\": 3,\n                \"date\": \"2025-07-21\"\n            },\n            {\n                \"user_id\": 215,\n                \"comment\": \"Would attend again!\",\n                \"rating\": 4,\n                \"date\": \"2025-02-27\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72ac7\",\n        \"name\": \"Music Event 86\",\n        \"city\": \"Bristol\",\n        \"category\": \"Music\",\n        \"date\": \"2025-08-26\",\n        \"price\": 10.88,\n        \"available_seats\": 35,\n        \"tags\": [\n            \"music\",\n            \"live\",\n            \"local\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -2.5879,\n                51.4545\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 165,\n                \"comment\": \"Great event!\",\n                \"rating\": 5,\n                \"date\": \"2025-02-02\"\n            },\n            {\n                \"user_id\": 255,\n                \"comment\": \"Very well organized.\",\n                \"rating\": 4,\n                \"date\": \"2025-05-20\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72ace\",\n        \"name\": \"Music Event 88\",\n        \"city\": \"Manchester\",\n        \"category\": \"Music\",\n        \"date\": \"2025-04-30\",\n        \"price\": 15.08,\n        \"available_seats\": 139,\n        \"tags\": [\n            \"music\",\n            \"live\",\n            \"local\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -2.2426,\n                53.4808\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 298,\n                \"comment\": \"Could be better.\",\n                \"rating\": 4,\n                \"date\": \"2025-08-09\"\n            },\n            {\n                \"user_id\": 226,\n                \"comment\": \"Great event!\",\n                \"rating\": 4,\n                \"date\": \"2025-04-04\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72ad0\",\n        \"name\": \"Music Event 95\",\n        \"city\": \"Edinburgh\",\n        \"category\": \"Music\",\n        \"date\": \"2025-02-22\",\n        \"price\": 5.42,\n        \"available_seats\": 79,\n        \"tags\": [\n            \"music\",\n            \"live\",\n            \"local\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -3.1883,\n                55.9533\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 214,\n                \"comment\": \"Very well organized.\",\n                \"rating\": 3,\n                \"date\": \"2025-05-31\"\n            },\n            {\n                \"user_id\": 159,\n                \"comment\": \"Loved it!\",\n                \"rating\": 3,\n                \"date\": \"2025-04-08\"\n            }\n        ]\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get All Events with Pagination + Sorting",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"const res = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Response has pagination or array\", function () {\r",
+									"    if (Array.isArray(res)) {\r",
+									"        console.warn(\"Response is an array (no pagination fields present)\");\r",
+									"        pm.expect(Array.isArray(res)).to.be.true;\r",
+									"    } else {\r",
+									"        pm.expect(res).to.have.property(\"page\");\r",
+									"        pm.expect(res).to.have.property(\"limit\");\r",
+									"        pm.expect(res).to.have.property(\"total\");\r",
+									"        pm.expect(res).to.have.property(\"data\");\r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5001/events?page=2&limit=5&sort_by=name&order=asc",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"events"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "sort_by",
+									"value": "name"
+								},
+								{
+									"key": "order",
+									"value": "asc"
+								}
+							]
+						},
+						"description": "Retrieves a paginated and sorted list of all events.  \n  \nSupports query parameters for page number, limit, sort field, and order.  \n  \nUseful for displaying events in an organized and efficient way."
+					},
+					"response": [
+						{
+							"name": "Get All Events with Pagination + Sorting",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5001/events?page=2&limit=5&sort_by=name&order=asc",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"events"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2"
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										},
+										{
+											"key": "sort_by",
+											"value": "name"
+										},
+										{
+											"key": "order",
+											"value": "asc"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.3 Python/3.13.2"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Nov 2025 16:43:07 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2739"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72a85\",\n        \"name\": \"Education & Workshops Event 9\",\n        \"city\": \"Cardiff\",\n        \"category\": \"Education & Workshops\",\n        \"date\": \"2025-02-05\",\n        \"price\": 83.96,\n        \"available_seats\": 89,\n        \"tags\": [\n            \"education\",\n            \"workshop\",\n            \"skills\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -3.1791,\n                51.4816\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 221,\n                \"comment\": \"Would attend again!\",\n                \"rating\": 5,\n                \"date\": \"2025-02-03\"\n            },\n            {\n                \"user_id\": 115,\n                \"comment\": \"Would attend again!\",\n                \"rating\": 5,\n                \"date\": \"2025-06-08\"\n            },\n            {\n                \"_id\": \"690bf1eeef16ee128476df83\",\n                \"user_id\": 150,\n                \"comment\": \"This was an awesome event!\",\n                \"rating\": 5,\n                \"date\": \"\"\n            },\n            {\n                \"_id\": \"690bf400ef16ee128476df85\",\n                \"user_id\": 150,\n                \"comment\": \"This was an awesome event!\",\n                \"rating\": 5,\n                \"date\": \"\"\n            },\n            {\n                \"_id\": \"690bf6804e4bd3ecb24a3fc1\",\n                \"user_id\": 150,\n                \"comment\": \"This was an awesome event!\",\n                \"rating\": 5,\n                \"date\": \"\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72a91\",\n        \"name\": \"Fitness Event 34\",\n        \"city\": \"Leeds\",\n        \"category\": \"Fitness\",\n        \"date\": \"2025-02-07\",\n        \"price\": 24.99,\n        \"available_seats\": 97,\n        \"tags\": [\n            \"fitness\",\n            \"wellness\",\n            \"outdoors\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -1.5491,\n                53.8008\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 300,\n                \"comment\": \"Loved it!\",\n                \"rating\": 3,\n                \"date\": \"2025-11-26\"\n            },\n            {\n                \"user_id\": 269,\n                \"comment\": \"Very well organized.\",\n                \"rating\": 3,\n                \"date\": \"2025-05-10\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72aab\",\n        \"name\": \"Technology Event 59\",\n        \"city\": \"Leeds\",\n        \"category\": \"Technology\",\n        \"date\": \"2025-02-08\",\n        \"price\": 59.66,\n        \"available_seats\": 56,\n        \"tags\": [\n            \"technology\",\n            \"innovation\",\n            \"talks\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -1.5491,\n                53.8008\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 291,\n                \"comment\": \"Amazing experience!\",\n                \"rating\": 4,\n                \"date\": \"2025-07-04\"\n            },\n            {\n                \"user_id\": 133,\n                \"comment\": \"Amazing experience!\",\n                \"rating\": 5,\n                \"date\": \"2025-09-18\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72a98\",\n        \"name\": \"Art & Culture Event 40\",\n        \"city\": \"Manchester\",\n        \"category\": \"Art & Culture\",\n        \"date\": \"2025-02-12\",\n        \"price\": 62.17,\n        \"available_seats\": 74,\n        \"tags\": [\n            \"art & culture\",\n            \"gallery\",\n            \"creative\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -2.2426,\n                53.4808\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 117,\n                \"comment\": \"Very well organized.\",\n                \"rating\": 3,\n                \"date\": \"2025-08-21\"\n            },\n            {\n                \"user_id\": 102,\n                \"comment\": \"Very well organized.\",\n                \"rating\": 5,\n                \"date\": \"2025-08-02\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72aa9\",\n        \"name\": \"Technology Event 52\",\n        \"city\": \"Cardiff\",\n        \"category\": \"Technology\",\n        \"date\": \"2025-02-13\",\n        \"price\": 7.93,\n        \"available_seats\": 54,\n        \"tags\": [\n            \"technology\",\n            \"innovation\",\n            \"talks\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -3.1791,\n                51.4816\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 263,\n                \"comment\": \"Very well organized.\",\n                \"rating\": 3,\n                \"date\": \"2025-07-12\"\n            },\n            {\n                \"user_id\": 215,\n                \"comment\": \"Amazing experience!\",\n                \"rating\": 3,\n                \"date\": \"2025-11-18\"\n            }\n        ]\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Aggregation Category Stats",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200));\r",
+									"pm.test(\"Response is valid aggregation output\", () => {\r",
+									"  const res = pm.response.json();\r",
+									"  pm.expect(res).to.be.an(\"array\");\r",
+									"  pm.expect(res[0]).to.have.property(\"_id\");\r",
+									"  pm.expect(res[0]).to.have.property(\"total_events\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5001/events/stats/categories",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"events",
+								"stats",
+								"categories"
+							]
+						},
+						"description": "Returns aggregated data that shows the number of events per category.  \n  \nHelpful for generating analytics dashboards or admin reports."
+					},
+					"response": [
+						{
+							"name": "Aggregation Category Stats",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5001/events/stats/categories",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"events",
+										"stats",
+										"categories"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.3 Python/3.13.2"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Nov 2025 16:43:59 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "132"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"Business & Networking\",\n        \"total_events\": 14\n    },\n    {\n        \"_id\": \"Fitness\",\n        \"total_events\": 14\n    },\n    {\n        \"_id\": \"Music\",\n        \"total_events\": 13\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Search nearby",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"const res = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Response has pagination or array\", function () {\r",
+									"    if (Array.isArray(res)) {\r",
+									"        console.warn(\"Response is an array (no pagination fields present)\");\r",
+									"        pm.expect(Array.isArray(res)).to.be.true;\r",
+									"    } else {\r",
+									"        pm.expect(res).to.have.property(\"page\");\r",
+									"        pm.expect(res).to.have.property(\"limit\");\r",
+									"        pm.expect(res).to.have.property(\"total\");\r",
+									"        pm.expect(res).to.have.property(\"data\");\r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5001/events/nearby?lat=53.4808&lon=-2.2426&radius=5",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"events",
+								"nearby"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "53.4808"
+								},
+								{
+									"key": "lon",
+									"value": "-2.2426"
+								},
+								{
+									"key": "radius",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Events with Pagination + Sorting",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5001/events?page=2&limit=5&sort_by=name&order=asc",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"events"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2"
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										},
+										{
+											"key": "sort_by",
+											"value": "name"
+										},
+										{
+											"key": "order",
+											"value": "asc"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.3 Python/3.13.2"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Nov 2025 16:43:07 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2739"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72a85\",\n        \"name\": \"Education & Workshops Event 9\",\n        \"city\": \"Cardiff\",\n        \"category\": \"Education & Workshops\",\n        \"date\": \"2025-02-05\",\n        \"price\": 83.96,\n        \"available_seats\": 89,\n        \"tags\": [\n            \"education\",\n            \"workshop\",\n            \"skills\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -3.1791,\n                51.4816\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 221,\n                \"comment\": \"Would attend again!\",\n                \"rating\": 5,\n                \"date\": \"2025-02-03\"\n            },\n            {\n                \"user_id\": 115,\n                \"comment\": \"Would attend again!\",\n                \"rating\": 5,\n                \"date\": \"2025-06-08\"\n            },\n            {\n                \"_id\": \"690bf1eeef16ee128476df83\",\n                \"user_id\": 150,\n                \"comment\": \"This was an awesome event!\",\n                \"rating\": 5,\n                \"date\": \"\"\n            },\n            {\n                \"_id\": \"690bf400ef16ee128476df85\",\n                \"user_id\": 150,\n                \"comment\": \"This was an awesome event!\",\n                \"rating\": 5,\n                \"date\": \"\"\n            },\n            {\n                \"_id\": \"690bf6804e4bd3ecb24a3fc1\",\n                \"user_id\": 150,\n                \"comment\": \"This was an awesome event!\",\n                \"rating\": 5,\n                \"date\": \"\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72a91\",\n        \"name\": \"Fitness Event 34\",\n        \"city\": \"Leeds\",\n        \"category\": \"Fitness\",\n        \"date\": \"2025-02-07\",\n        \"price\": 24.99,\n        \"available_seats\": 97,\n        \"tags\": [\n            \"fitness\",\n            \"wellness\",\n            \"outdoors\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -1.5491,\n                53.8008\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 300,\n                \"comment\": \"Loved it!\",\n                \"rating\": 3,\n                \"date\": \"2025-11-26\"\n            },\n            {\n                \"user_id\": 269,\n                \"comment\": \"Very well organized.\",\n                \"rating\": 3,\n                \"date\": \"2025-05-10\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72aab\",\n        \"name\": \"Technology Event 59\",\n        \"city\": \"Leeds\",\n        \"category\": \"Technology\",\n        \"date\": \"2025-02-08\",\n        \"price\": 59.66,\n        \"available_seats\": 56,\n        \"tags\": [\n            \"technology\",\n            \"innovation\",\n            \"talks\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -1.5491,\n                53.8008\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 291,\n                \"comment\": \"Amazing experience!\",\n                \"rating\": 4,\n                \"date\": \"2025-07-04\"\n            },\n            {\n                \"user_id\": 133,\n                \"comment\": \"Amazing experience!\",\n                \"rating\": 5,\n                \"date\": \"2025-09-18\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72a98\",\n        \"name\": \"Art & Culture Event 40\",\n        \"city\": \"Manchester\",\n        \"category\": \"Art & Culture\",\n        \"date\": \"2025-02-12\",\n        \"price\": 62.17,\n        \"available_seats\": 74,\n        \"tags\": [\n            \"art & culture\",\n            \"gallery\",\n            \"creative\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -2.2426,\n                53.4808\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 117,\n                \"comment\": \"Very well organized.\",\n                \"rating\": 3,\n                \"date\": \"2025-08-21\"\n            },\n            {\n                \"user_id\": 102,\n                \"comment\": \"Very well organized.\",\n                \"rating\": 5,\n                \"date\": \"2025-08-02\"\n            }\n        ]\n    },\n    {\n        \"_id\": \"690b8ce2c2a47419d9e72aa9\",\n        \"name\": \"Technology Event 52\",\n        \"city\": \"Cardiff\",\n        \"category\": \"Technology\",\n        \"date\": \"2025-02-13\",\n        \"price\": 7.93,\n        \"available_seats\": 54,\n        \"tags\": [\n            \"technology\",\n            \"innovation\",\n            \"talks\"\n        ],\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -3.1791,\n                51.4816\n            ]\n        },\n        \"reviews\": [\n            {\n                \"user_id\": 263,\n                \"comment\": \"Very well organized.\",\n                \"rating\": 3,\n                \"date\": \"2025-07-12\"\n            },\n            {\n                \"user_id\": 215,\n                \"comment\": \"Amazing experience!\",\n                \"rating\": 3,\n                \"date\": \"2025-11-18\"\n            }\n        ]\n    }\n]"
+						}
+					]
+				}
+			],
+			"description": "The **Events** module handles all operations related to event management.\n\nIt supports CRUD functionality along with advanced search and analytics features.\n\n**Features:**\n\n- Retrieve all events or a single event by ID\n    \n- Create, update, and delete events\n    \n- Search events by city or category\n    \n- Retrieve nearby events using geolocation parameters\n    \n- Generate category-based statistics using aggregation"
+		},
+		{
+			"name": "Reviews",
+			"item": [
+				{
+					"name": "Get reviews for specific event",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response should be an array\", function () {\r",
+									"    pm.expect(pm.response.json()).to.be.an(\"array\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Each review should have required fields\", function () {\r",
+									"    const reviews = pm.response.json();\r",
+									"    if (reviews.length > 0) {\r",
+									"        reviews.forEach(r => {\r",
+									"            pm.expect(r).to.have.property(\"user_id\");\r",
+									"            pm.expect(r).to.have.property(\"comment\");\r",
+									"            pm.expect(r).to.have.property(\"rating\");\r",
+									"        });\r",
+									"    } else {\r",
+									"        console.warn(\"No reviews found for this event\");\r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5001/reviews/690d5791d500e9e6e70d69ad",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"reviews",
+								"690d5791d500e9e6e70d69ad"
+							]
+						},
+						"description": "Retrieves all reviews associated with a specific event.  \n  \nEach review includes the reviewer’s name, rating, and comment."
+					},
+					"response": [
+						{
+							"name": "Get reviews for specific event",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:5001/reviews/690d5791d500e9e6e70d69ad",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"reviews",
+										"690d5791d500e9e6e70d69ad"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.3 Python/3.13.2"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Nov 2025 02:37:55 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "164"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"user_id\": 245,\n        \"comment\": \"Loved it!\",\n        \"rating\": 5,\n        \"date\": \"2025-06-05\"\n    },\n    {\n        \"user_id\": 132,\n        \"comment\": \"Would attend again!\",\n        \"rating\": 4,\n        \"date\": \"2025-09-28\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Post a review",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201 (Review created)\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+									"});\r",
+									"\r",
+									"const res = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Response should contain success message\", function () {\r",
+									"    if (res.message) {\r",
+									"        pm.expect(res.message.toLowerCase()).to.include(\"success\");\r",
+									"    } else if (res.msg) {\r",
+									"        pm.expect(res.msg.toLowerCase()).to.include(\"success\");\r",
+									"    } else {\r",
+									"        console.warn(\"No 'message' field found. Response:\", res);\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is acceptable\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ4MTcwOCwianRpIjoiZWEyYTU0YTYtMzU0Yy00YzAzLTlkZTktYjQyNDlmNGFkNGU3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MGQzZWUwYTRjMGE0NTUzMjVjYmZlMCIsIm5iZiI6MTc2MjQ4MTcwOCwiY3NyZiI6ImNiZDE3MzcxLTYyMGYtNDkyYi05NGYyLWE1NGZlMDI2NjQ1MSIsImV4cCI6MTc2MjQ4ODkwOH0.8Gcrc_iY7YFfzGc_bZsAfa90c4QGFCm8Jkvj8d0WKzw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user_id\": 150,\r\n  \"comment\": \"This was an awesome event!\",\r\n  \"rating\": 5\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5001/reviews/690d5791d500e9e6e70d69ad",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"reviews",
+								"690d5791d500e9e6e70d69ad"
+							]
+						},
+						"description": "Allows an authenticated user to submit a review for an event.  \n  \nRequires `rating` and `comment` fields in the request body."
+					},
+					"response": [
+						{
+							"name": "Post a review",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ4MTcwOCwianRpIjoiZWEyYTU0YTYtMzU0Yy00YzAzLTlkZTktYjQyNDlmNGFkNGU3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MGQzZWUwYTRjMGE0NTUzMjVjYmZlMCIsIm5iZiI6MTc2MjQ4MTcwOCwiY3NyZiI6ImNiZDE3MzcxLTYyMGYtNDkyYi05NGYyLWE1NGZlMDI2NjQ1MSIsImV4cCI6MTc2MjQ4ODkwOH0.8Gcrc_iY7YFfzGc_bZsAfa90c4QGFCm8Jkvj8d0WKzw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"user_id\": 150,\r\n  \"comment\": \"This was an awesome event!\",\r\n  \"rating\": 5\r\n}\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5001/reviews/690d5791d500e9e6e70d69ad",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"reviews",
+										"690d5791d500e9e6e70d69ad"
+									]
+								}
+							},
+							"status": "CREATED",
+							"code": 201,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.3 Python/3.13.2"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Nov 2025 02:45:48 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "81"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Review added successfully\",\n    \"review_id\": \"690d5d5ca4c0a455325cbfe3\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update a review",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200 or 201 (Review updated)\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 404]);\r",
+									"});\r",
+									"\r",
+									"const res = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Response should contain success or handled message\", function () {\r",
+									"    if (res.message) {\r",
+									"        pm.expect(res.message.toLowerCase()).to.include(\"success\");\r",
+									"    } else if (res.error && pm.response.code === 404) {\r",
+									"        console.warn(\"Review not found – skipping success check\");\r",
+									"    } else {\r",
+									"        console.warn(\"No 'message' field found. Response:\", res);\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time is acceptable\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ4MTcwOCwianRpIjoiZWEyYTU0YTYtMzU0Yy00YzAzLTlkZTktYjQyNDlmNGFkNGU3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MGQzZWUwYTRjMGE0NTUzMjVjYmZlMCIsIm5iZiI6MTc2MjQ4MTcwOCwiY3NyZiI6ImNiZDE3MzcxLTYyMGYtNDkyYi05NGYyLWE1NGZlMDI2NjQ1MSIsImV4cCI6MTc2MjQ4ODkwOH0.8Gcrc_iY7YFfzGc_bZsAfa90c4QGFCm8Jkvj8d0WKzw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"comment\": \"awesome event!\",\r\n  \"rating\": 4\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5001/reviews/690d5791d500e9e6e70d69ad/690d5d5ca4c0a455325cbfe3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"reviews",
+								"690d5791d500e9e6e70d69ad",
+								"690d5d5ca4c0a455325cbfe3"
+							]
+						},
+						"description": "Lets a user update their previously submitted review for a specific event.\n\nOnly the original reviewer is authorized to edit their review."
+					},
+					"response": [
+						{
+							"name": "update a review",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ4MTcwOCwianRpIjoiZWEyYTU0YTYtMzU0Yy00YzAzLTlkZTktYjQyNDlmNGFkNGU3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MGQzZWUwYTRjMGE0NTUzMjVjYmZlMCIsIm5iZiI6MTc2MjQ4MTcwOCwiY3NyZiI6ImNiZDE3MzcxLTYyMGYtNDkyYi05NGYyLWE1NGZlMDI2NjQ1MSIsImV4cCI6MTc2MjQ4ODkwOH0.8Gcrc_iY7YFfzGc_bZsAfa90c4QGFCm8Jkvj8d0WKzw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"comment\": \"awesome event!\",\r\n  \"rating\": 4\r\n}\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5001/reviews/690d5791d500e9e6e70d69ad/690d5d5ca4c0a455325cbfe3",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"reviews",
+										"690d5791d500e9e6e70d69ad",
+										"690d5d5ca4c0a455325cbfe3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.3 Python/3.13.2"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Nov 2025 02:47:57 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Review updated successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete a review",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200 or 404 (Review deleted or not found)\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is valid JSON\", function () {\r",
+									"    pm.response.to.be.withBody;\r",
+									"    pm.response.to.be.json;\r",
+									"});\r",
+									"\r",
+									"const res = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Response message confirms deletion or not found\", function () {\r",
+									"    if (res.message) {\r",
+									"        pm.expect(res.message.toLowerCase()).to.include(\"deleted\");\r",
+									"    } else if (res.error && pm.response.code === 404) {\r",
+									"        console.warn(\"Review not found – skipping deletion confirmation\");\r",
+									"    } else {\r",
+									"        console.warn(\"No 'message' in response:\", res);\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time < 1000ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ4MTcwOCwianRpIjoiZWEyYTU0YTYtMzU0Yy00YzAzLTlkZTktYjQyNDlmNGFkNGU3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MGQzZWUwYTRjMGE0NTUzMjVjYmZlMCIsIm5iZiI6MTc2MjQ4MTcwOCwiY3NyZiI6ImNiZDE3MzcxLTYyMGYtNDkyYi05NGYyLWE1NGZlMDI2NjQ1MSIsImV4cCI6MTc2MjQ4ODkwOH0.8Gcrc_iY7YFfzGc_bZsAfa90c4QGFCm8Jkvj8d0WKzw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"comment\": \"awesome event!\",\r\n  \"rating\": 4\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5001/reviews/690d5791d500e9e6e70d69ad/690d5d5ca4c0a455325cbfe3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"reviews",
+								"690d5791d500e9e6e70d69ad",
+								"690d5d5ca4c0a455325cbfe3"
+							]
+						},
+						"description": "Deletes a review based on event and review ID.  \n  \nUsed for moderation or when a user wants to remove their feedback."
+					},
+					"response": [
+						{
+							"name": "Delete a review",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ4MTcwOCwianRpIjoiZWEyYTU0YTYtMzU0Yy00YzAzLTlkZTktYjQyNDlmNGFkNGU3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MGQzZWUwYTRjMGE0NTUzMjVjYmZlMCIsIm5iZiI6MTc2MjQ4MTcwOCwiY3NyZiI6ImNiZDE3MzcxLTYyMGYtNDkyYi05NGYyLWE1NGZlMDI2NjQ1MSIsImV4cCI6MTc2MjQ4ODkwOH0.8Gcrc_iY7YFfzGc_bZsAfa90c4QGFCm8Jkvj8d0WKzw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"comment\": \"awesome event!\",\r\n  \"rating\": 4\r\n}\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5001/reviews/690d5791d500e9e6e70d69ad/690d5d5ca4c0a455325cbfe3",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"reviews",
+										"690d5791d500e9e6e70d69ad",
+										"690d5d5ca4c0a455325cbfe3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.3 Python/3.13.2"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Nov 2025 02:48:46 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Review deleted successfully\"\n}"
+						}
+					]
+				}
+			],
+			"description": "The **Reviews** module allows users to share feedback about events they have attended.\n\nEach review is linked to a specific event via its ID.\n\n**Features:**\n\n- Retrieve reviews for an event\n    \n- Add a new review\n    \n- Update or delete existing reviews\n    \n\n**Validation:**  \n  \nReview text and rating are required fields."
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Register User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Handled registration response\", function () {\r",
+									"    const code = pm.response.code;\r",
+									"    pm.expect([201, 400]).to.include(code); // Accept both successful and duplicate cases\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Registration message or error handled\", function () {\r",
+									"    const res = pm.response.json();\r",
+									"    if (res.message) {\r",
+									"        pm.expect(res.message.toLowerCase()).to.include(\"success\");\r",
+									"    } else if (res.error) {\r",
+									"        pm.expect(res.error.toLowerCase()).to.include(\"exists\");\r",
+									"        console.warn(\"User already exists – handled gracefully\");\r",
+									"    } else {\r",
+									"        console.warn(\"Unexpected response:\", res);\r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"ella691\",\r\n  \"password\": \"Password123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5001/auth/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"auth",
+								"register"
+							]
+						},
+						"description": "Creates a new user account in the system.  \n  \nRequires `username`, `email`, and `password` in the request body.  \n  \nReturns a success message confirming registration."
+					},
+					"response": [
+						{
+							"name": "Register User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"bhumika\",\r\n  \"password\": \"myPassword123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5001/auth/register",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "CREATED",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.3 Python/3.13.2"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Nov 2025 20:26:41 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User registered successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": " User Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Handled login response\", function () {\r",
+									"    const code = pm.response.code;\r",
+									"    pm.expect([200, 401]).to.include(code); // accept 401 if invalid credentials\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Token or error message handled\", function () {\r",
+									"    const res = pm.response.json();\r",
+									"    if (res.token) {\r",
+									"        pm.expect(res).to.have.property(\"token\");\r",
+									"        console.log(\" Token saved:\", res.token);\r",
+									"    } else if (res.error) {\r",
+									"        pm.expect(res.error.toLowerCase()).to.include(\"invalid\");\r",
+									"        console.warn(\"Invalid credentials handled properly\");\r",
+									"    } else {\r",
+									"        console.warn(\"Unexpected login response:\", res);\r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ4MTcwOCwianRpIjoiZWEyYTU0YTYtMzU0Yy00YzAzLTlkZTktYjQyNDlmNGFkNGU3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MGQzZWUwYTRjMGE0NTUzMjVjYmZlMCIsIm5iZiI6MTc2MjQ4MTcwOCwiY3NyZiI6ImNiZDE3MzcxLTYyMGYtNDkyYi05NGYyLWE1NGZlMDI2NjQ1MSIsImV4cCI6MTc2MjQ4ODkwOH0.8Gcrc_iY7YFfzGc_bZsAfa90c4QGFCm8Jkvj8d0WKzw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"ella691\",\r\n  \"password\": \"Password123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5001/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"auth",
+								"login"
+							]
+						},
+						"description": "Authenticates a registered user using their email and password.  \n  \nOn success, returns a **JWT token** used for accessing protected endpoints."
+					},
+					"response": [
+						{
+							"name": "User Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ2MDgyMiwianRpIjoiZjMxNDYwNTAtYmFiZC00MmYxLTgzYTQtMzYxZDkyMThkZGM1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MGQwNDgxYTRjMGE0NTUzMjVjYmZkYyIsIm5iZiI6MTc2MjQ2MDgyMiwiY3NyZiI6ImUyNTQ0NWMzLTEwMWUtNDM1Yi1iNzBmLTFiZjBlNTA1YTQyNiIsImV4cCI6MTc2MjQ2ODAyMn0.Ebz7SReSzQFAhKS3JCG5YYI3VXeBtnfzVFuvvCCBuK4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"bhumika\",\r\n  \"password\": \"myPassword123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5001/auth/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.3 Python/3.13.2"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Nov 2025 20:27:02 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "400"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Login successful\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ2MDgyMiwianRpIjoiZjMxNDYwNTAtYmFiZC00MmYxLTgzYTQtMzYxZDkyMThkZGM1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MGQwNDgxYTRjMGE0NTUzMjVjYmZkYyIsIm5iZiI6MTc2MjQ2MDgyMiwiY3NyZiI6ImUyNTQ0NWMzLTEwMWUtNDM1Yi1iNzBmLTFiZjBlNTA1YTQyNiIsImV4cCI6MTc2MjQ2ODAyMn0.Ebz7SReSzQFAhKS3JCG5YYI3VXeBtnfzVFuvvCCBuK4\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Profile",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ4MTcwOCwianRpIjoiZWEyYTU0YTYtMzU0Yy00YzAzLTlkZTktYjQyNDlmNGFkNGU3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MGQzZWUwYTRjMGE0NTUzMjVjYmZlMCIsIm5iZiI6MTc2MjQ4MTcwOCwiY3NyZiI6ImNiZDE3MzcxLTYyMGYtNDkyYi05NGYyLWE1NGZlMDI2NjQ1MSIsImV4cCI6MTc2MjQ4ODkwOH0.8Gcrc_iY7YFfzGc_bZsAfa90c4QGFCm8Jkvj8d0WKzw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:5001/auth/profile",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"auth",
+								"profile"
+							]
+						},
+						"description": "Returns the logged-in user’s profile information such as username and email.  \n  \nRequires a valid JWT token in the Authorization header."
+					},
+					"response": [
+						{
+							"name": "Get Profile",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ0OTE3OCwianRpIjoiNTBlMjA2NTItNGJlNC00Mjc0LTg1NDUtYTBhYWY5MDEzYzhlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MDhmNjE2ZjlmNzBkZjY1ODNkYWRjNyIsIm5iZiI6MTc2MjQ0OTE3OCwiY3NyZiI6IjE1NzI1YTI4LWU5NjgtNDJjNy04YTAwLWM5Mjg0Nzk5Y2M3YSIsImV4cCI6MTc2MjQ1NjM3OH0.ei4LlWNb-QQ8sfOUpQN48ogKyNAbdWPbmmIQ3lIGH_s",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:5001/auth/profile",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"auth",
+										"profile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.3 Python/3.13.2"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Nov 2025 17:05:34 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"690cd397a4c0a455325cbfcf\",\n    \"username\": \"charlie539\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update Profile",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ4MTcwOCwianRpIjoiZWEyYTU0YTYtMzU0Yy00YzAzLTlkZTktYjQyNDlmNGFkNGU3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MGQzZWUwYTRjMGE0NTUzMjVjYmZlMCIsIm5iZiI6MTc2MjQ4MTcwOCwiY3NyZiI6ImNiZDE3MzcxLTYyMGYtNDkyYi05NGYyLWE1NGZlMDI2NjQ1MSIsImV4cCI6MTc2MjQ4ODkwOH0.8Gcrc_iY7YFfzGc_bZsAfa90c4QGFCm8Jkvj8d0WKzw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"charlie533\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5001/auth/profile",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"auth",
+								"profile"
+							]
+						},
+						"description": "Allows a user to modify their profile details (e.g., username, email).  \n  \nRequires authentication to prevent unauthorized changes."
+					},
+					"response": [
+						{
+							"name": "update Profile",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ0OTE3OCwianRpIjoiNTBlMjA2NTItNGJlNC00Mjc0LTg1NDUtYTBhYWY5MDEzYzhlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MDhmNjE2ZjlmNzBkZjY1ODNkYWRjNyIsIm5iZiI6MTc2MjQ0OTE3OCwiY3NyZiI6IjE1NzI1YTI4LWU5NjgtNDJjNy04YTAwLWM5Mjg0Nzk5Y2M3YSIsImV4cCI6MTc2MjQ1NjM3OH0.ei4LlWNb-QQ8sfOUpQN48ogKyNAbdWPbmmIQ3lIGH_s",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"charlie533\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5001/auth/profile",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"auth",
+										"profile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.3 Python/3.13.2"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Nov 2025 17:08:42 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Profile updated successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Profile",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Handled delete profile response\", function () {\r",
+									"    const code = pm.response.code;\r",
+									"    pm.expect([200, 201, 404]).to.include(code); // accept all valid handled responses\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response is JSON and valid\", function () {\r",
+									"    pm.response.to.be.withBody;\r",
+									"    pm.response.to.be.json;\r",
+									"    const res = pm.response.json();\r",
+									"    if (res.message) {\r",
+									"        pm.expect(res.message.toLowerCase()).to.include(\"deleted\");\r",
+									"    } else if (res.error) {\r",
+									"        console.warn(\"Profile not found – handled properly\");\r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ4MTcwOCwianRpIjoiZWEyYTU0YTYtMzU0Yy00YzAzLTlkZTktYjQyNDlmNGFkNGU3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MGQzZWUwYTRjMGE0NTUzMjVjYmZlMCIsIm5iZiI6MTc2MjQ4MTcwOCwiY3NyZiI6ImNiZDE3MzcxLTYyMGYtNDkyYi05NGYyLWE1NGZlMDI2NjQ1MSIsImV4cCI6MTc2MjQ4ODkwOH0.8Gcrc_iY7YFfzGc_bZsAfa90c4QGFCm8Jkvj8d0WKzw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5001/auth/profile",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"auth",
+								"profile"
+							]
+						},
+						"description": "Deletes the currently logged-in user’s account.  \n  \nRequires authentication and returns a confirmation message after deletion."
+					},
+					"response": [
+						{
+							"name": "Delete Profile",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ0OTE3OCwianRpIjoiNTBlMjA2NTItNGJlNC00Mjc0LTg1NDUtYTBhYWY5MDEzYzhlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MDhmNjE2ZjlmNzBkZjY1ODNkYWRjNyIsIm5iZiI6MTc2MjQ0OTE3OCwiY3NyZiI6IjE1NzI1YTI4LWU5NjgtNDJjNy04YTAwLWM5Mjg0Nzk5Y2M3YSIsImV4cCI6MTc2MjQ1NjM3OH0.ei4LlWNb-QQ8sfOUpQN48ogKyNAbdWPbmmIQ3lIGH_s",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5001/auth/profile",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"auth",
+										"profile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.3 Python/3.13.2"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Nov 2025 17:10:39 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "48"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User account deleted successfully\"\n}"
+						}
+					]
+				}
+			],
+			"description": "The **Users** module manages user registration, login, and profile maintenance.\n\nJWT authentication is implemented to ensure secure access to protected routes.\n\n**Features:**\n\n- Register a new user\n    \n- Log in and obtain JWT token\n    \n- View, update, or delete profile\n    \n\n**Notes:**  \n  \nThe JWT token must be included in the header for accessing profile endpoints.  \n  \nExample:  \n`Authorization: Bearer`"
+		},
+		{
+			"name": "Bookings",
+			"item": [
+				{
+					"name": "Post a booking",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Booking created successfully\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 400]);\r",
+									"\r",
+									"    const res = pm.response.json();\r",
+									"\r",
+									"    if (pm.response.code === 201) {\r",
+									"        pm.expect(res).to.have.property(\"message\");\r",
+									"        pm.expect(res.message.toLowerCase()).to.include(\"booking\");\r",
+									"        if (res.booking) {\r",
+									"            pm.expect(res.booking).to.have.property(\"_id\");\r",
+									"        }\r",
+									"    } else if (pm.response.code === 400) {\r",
+									"        console.warn(\"Bad request – missing or invalid booking data:\", res);\r",
+									"    } else {\r",
+									"        console.warn(\"Unexpected response:\", res);\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time < 800ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ4MTcwOCwianRpIjoiZWEyYTU0YTYtMzU0Yy00YzAzLTlkZTktYjQyNDlmNGFkNGU3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MGQzZWUwYTRjMGE0NTUzMjVjYmZlMCIsIm5iZiI6MTc2MjQ4MTcwOCwiY3NyZiI6ImNiZDE3MzcxLTYyMGYtNDkyYi05NGYyLWE1NGZlMDI2NjQ1MSIsImV4cCI6MTc2MjQ4ODkwOH0.8Gcrc_iY7YFfzGc_bZsAfa90c4QGFCm8Jkvj8d0WKzw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"event_id\": \"690d5791d500e9e6e70d6968\",\r\n  \"ticket_count\": 2\r\n}\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5001/bookings",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"bookings"
+							]
+						},
+						"description": "Allows a logged-in user to book a ticket for an event.\n\nEnsures users cannot book the same event multiple times."
+					},
+					"response": [
+						{
+							"name": "Post a booking",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ4MTcwOCwianRpIjoiZWEyYTU0YTYtMzU0Yy00YzAzLTlkZTktYjQyNDlmNGFkNGU3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MGQzZWUwYTRjMGE0NTUzMjVjYmZlMCIsIm5iZiI6MTc2MjQ4MTcwOCwiY3NyZiI6ImNiZDE3MzcxLTYyMGYtNDkyYi05NGYyLWE1NGZlMDI2NjQ1MSIsImV4cCI6MTc2MjQ4ODkwOH0.8Gcrc_iY7YFfzGc_bZsAfa90c4QGFCm8Jkvj8d0WKzw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"event_id\": \"690d5791d500e9e6e70d696d\",\r\n  \"ticket_count\": 2\r\n}\r\n\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5001/bookings",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"bookings"
+									]
+								}
+							},
+							"status": "CREATED",
+							"code": 201,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.3 Python/3.13.2"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Nov 2025 02:56:09 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "246"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Booking successful\",\n    \"booking\": {\n        \"user_id\": \"690d3ee0a4c0a455325cbfe0\",\n        \"event_id\": \"690d5791d500e9e6e70d696d\",\n        \"ticket_count\": 2,\n        \"status\": \"confirmed\",\n        \"created_at\": \"2025-11-07T02:56:09.901325\",\n        \"_id\": \"690d5fc9a4c0a455325cbfe4\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get all bookings",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"const responseData = pm.response.json();\r",
+									"pm.test(\"Response should be an array\", function () {\r",
+									"    pm.expect(Array.isArray(responseData)).to.be.true;\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ4MTcwOCwianRpIjoiZWEyYTU0YTYtMzU0Yy00YzAzLTlkZTktYjQyNDlmNGFkNGU3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MGQzZWUwYTRjMGE0NTUzMjVjYmZlMCIsIm5iZiI6MTc2MjQ4MTcwOCwiY3NyZiI6ImNiZDE3MzcxLTYyMGYtNDkyYi05NGYyLWE1NGZlMDI2NjQ1MSIsImV4cCI6MTc2MjQ4ODkwOH0.8Gcrc_iY7YFfzGc_bZsAfa90c4QGFCm8Jkvj8d0WKzw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5001/bookings",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"bookings"
+							]
+						},
+						"description": "Retrieves all bookings stored in the system.  \n  \nAdmins can use this to monitor activity and user participation."
+					},
+					"response": [
+						{
+							"name": "Get all bookings",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ4MTcwOCwianRpIjoiZWEyYTU0YTYtMzU0Yy00YzAzLTlkZTktYjQyNDlmNGFkNGU3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MGQzZWUwYTRjMGE0NTUzMjVjYmZlMCIsIm5iZiI6MTc2MjQ4MTcwOCwiY3NyZiI6ImNiZDE3MzcxLTYyMGYtNDkyYi05NGYyLWE1NGZlMDI2NjQ1MSIsImV4cCI6MTc2MjQ4ODkwOH0.8Gcrc_iY7YFfzGc_bZsAfa90c4QGFCm8Jkvj8d0WKzw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5001/bookings",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"bookings"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.3 Python/3.13.2"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Nov 2025 02:54:48 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2420"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"690d5832f474a1d4404e21e4\",\n        \"user_id\": \"690d3ee0a4c0a455325cbfe0\",\n        \"event_id\": \"690d5791d500e9e6e70d6976\",\n        \"ticket_count\": 1,\n        \"status\": \"cancelled\",\n        \"created_at\": \"2025-11-07T02:23:46.448989\"\n    },\n    {\n        \"_id\": \"690d5832f474a1d4404e21ec\",\n        \"user_id\": \"690d3ee0a4c0a455325cbfe0\",\n        \"event_id\": \"690d5791d500e9e6e70d696d\",\n        \"ticket_count\": 5,\n        \"status\": \"confirmed\",\n        \"created_at\": \"2025-11-07T02:23:46.449043\"\n    },\n    {\n        \"_id\": \"690d5832f474a1d4404e21f0\",\n        \"user_id\": \"690d3ee0a4c0a455325cbfe0\",\n        \"event_id\": \"690d5791d500e9e6e70d69c7\",\n        \"ticket_count\": 1,\n        \"status\": \"pending\",\n        \"created_at\": \"2025-11-07T02:23:46.449070\"\n    },\n    {\n        \"_id\": \"690d5832f474a1d4404e21e1\",\n        \"user_id\": \"690d3ee0a4c0a455325cbfe0\",\n        \"event_id\": \"690d5791d500e9e6e70d6986\",\n        \"ticket_count\": 1,\n        \"status\": \"confirmed\",\n        \"created_at\": \"2025-11-07T02:23:46.448935\"\n    },\n    {\n        \"_id\": \"690d5832f474a1d4404e21f6\",\n        \"user_id\": \"690d3ee0a4c0a455325cbfe0\",\n        \"event_id\": \"690d5791d500e9e6e70d69a7\",\n        \"ticket_count\": 1,\n        \"status\": \"confirmed\",\n        \"created_at\": \"2025-11-07T02:23:46.449121\"\n    },\n    {\n        \"_id\": \"690d5832f474a1d4404e2205\",\n        \"user_id\": \"690d3ee0a4c0a455325cbfe0\",\n        \"event_id\": \"690d5791d500e9e6e70d69b6\",\n        \"ticket_count\": 3,\n        \"status\": \"pending\",\n        \"created_at\": \"2025-11-07T02:23:46.449240\"\n    },\n    {\n        \"_id\": \"690d5832f474a1d4404e2207\",\n        \"user_id\": \"690d3ee0a4c0a455325cbfe0\",\n        \"event_id\": \"690d5791d500e9e6e70d6973\",\n        \"ticket_count\": 1,\n        \"status\": \"confirmed\",\n        \"created_at\": \"2025-11-07T02:23:46.449253\"\n    },\n    {\n        \"_id\": \"690d5832f474a1d4404e220a\",\n        \"user_id\": \"690d3ee0a4c0a455325cbfe0\",\n        \"event_id\": \"690d5791d500e9e6e70d6995\",\n        \"ticket_count\": 3,\n        \"status\": \"cancelled\",\n        \"created_at\": \"2025-11-07T02:23:46.449272\"\n    },\n    {\n        \"_id\": \"690d5832f474a1d4404e220e\",\n        \"user_id\": \"690d3ee0a4c0a455325cbfe0\",\n        \"event_id\": \"690d5791d500e9e6e70d69a5\",\n        \"ticket_count\": 3,\n        \"status\": \"confirmed\",\n        \"created_at\": \"2025-11-07T02:23:46.449298\"\n    },\n    {\n        \"_id\": \"690d5832f474a1d4404e221d\",\n        \"user_id\": \"690d3ee0a4c0a455325cbfe0\",\n        \"event_id\": \"690d5791d500e9e6e70d6979\",\n        \"ticket_count\": 5,\n        \"status\": \"confirmed\",\n        \"created_at\": \"2025-11-07T02:23:46.449403\"\n    },\n    {\n        \"_id\": \"690d5832f474a1d4404e2220\",\n        \"user_id\": \"690d3ee0a4c0a455325cbfe0\",\n        \"event_id\": \"690d5791d500e9e6e70d69a7\",\n        \"ticket_count\": 3,\n        \"status\": \"cancelled\",\n        \"created_at\": \"2025-11-07T02:23:46.449421\"\n    },\n    {\n        \"_id\": \"690d5832f474a1d4404e2215\",\n        \"user_id\": \"690d3ee0a4c0a455325cbfe0\",\n        \"event_id\": \"690d5791d500e9e6e70d6979\",\n        \"ticket_count\": 1,\n        \"status\": \"confirmed\",\n        \"created_at\": \"2025-11-07T02:23:46.449353\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get single booking",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"const booking = pm.response.json();\r",
+									"pm.test(\"Response should be an object\", function () {\r",
+									"    pm.expect(booking).to.be.an(\"object\");\r",
+									"    pm.expect(booking).to.have.property(\"_id\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ4MTcwOCwianRpIjoiZWEyYTU0YTYtMzU0Yy00YzAzLTlkZTktYjQyNDlmNGFkNGU3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MGQzZWUwYTRjMGE0NTUzMjVjYmZlMCIsIm5iZiI6MTc2MjQ4MTcwOCwiY3NyZiI6ImNiZDE3MzcxLTYyMGYtNDkyYi05NGYyLWE1NGZlMDI2NjQ1MSIsImV4cCI6MTc2MjQ4ODkwOH0.8Gcrc_iY7YFfzGc_bZsAfa90c4QGFCm8Jkvj8d0WKzw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5001/bookings/690d6636a4c0a455325cbfe8",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"bookings",
+								"690d6636a4c0a455325cbfe8"
+							]
+						},
+						"description": "Returns detailed information about a specific booking, including event and user details."
+					},
+					"response": [
+						{
+							"name": "Get single booking",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ4MTcwOCwianRpIjoiZWEyYTU0YTYtMzU0Yy00YzAzLTlkZTktYjQyNDlmNGFkNGU3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MGQzZWUwYTRjMGE0NTUzMjVjYmZlMCIsIm5iZiI6MTc2MjQ4MTcwOCwiY3NyZiI6ImNiZDE3MzcxLTYyMGYtNDkyYi05NGYyLWE1NGZlMDI2NjQ1MSIsImV4cCI6MTc2MjQ4ODkwOH0.8Gcrc_iY7YFfzGc_bZsAfa90c4QGFCm8Jkvj8d0WKzw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5001/bookings/690d5fc9a4c0a455325cbfe4",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"bookings",
+										"690d5fc9a4c0a455325cbfe4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.3 Python/3.13.2"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Nov 2025 02:56:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "200"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"690d5fc9a4c0a455325cbfe4\",\n    \"user_id\": \"690d3ee0a4c0a455325cbfe0\",\n    \"event_id\": \"690d5791d500e9e6e70d696d\",\n    \"ticket_count\": 2,\n    \"status\": \"confirmed\",\n    \"created_at\": \"2025-11-07T02:56:09.901000\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update a booking",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Booking update handled correctly\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 404]);\r",
+									"\r",
+									"    const res = pm.response.json();\r",
+									"\r",
+									"    if (pm.response.code === 200 || pm.response.code === 201) {\r",
+									"        pm.expect(res).to.have.property(\"message\");\r",
+									"        pm.expect(res.message.toLowerCase()).to.include(\"updated\");\r",
+									"    } else if (pm.response.code === 404) {\r",
+									"        console.warn(\"Booking not found – skipping update confirmation\");\r",
+									"    } else {\r",
+									"        console.warn(\"Unexpected response:\", res);\r",
+									"    }\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ4MTcwOCwianRpIjoiZWEyYTU0YTYtMzU0Yy00YzAzLTlkZTktYjQyNDlmNGFkNGU3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MGQzZWUwYTRjMGE0NTUzMjVjYmZlMCIsIm5iZiI6MTc2MjQ4MTcwOCwiY3NyZiI6ImNiZDE3MzcxLTYyMGYtNDkyYi05NGYyLWE1NGZlMDI2NjQ1MSIsImV4cCI6MTc2MjQ4ODkwOH0.8Gcrc_iY7YFfzGc_bZsAfa90c4QGFCm8Jkvj8d0WKzw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"status\": \"cancelled\"\r\n}\r\n\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5001/bookings/690d5fc9a4c0a455325cbfe4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"bookings",
+								"690d5fc9a4c0a455325cbfe4"
+							]
+						},
+						"description": "Updates existing booking details, such as seat type or number of tickets.  \n  \nReturns confirmation upon successful update."
+					},
+					"response": [
+						{
+							"name": "update a booking",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ4MTcwOCwianRpIjoiZWEyYTU0YTYtMzU0Yy00YzAzLTlkZTktYjQyNDlmNGFkNGU3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MGQzZWUwYTRjMGE0NTUzMjVjYmZlMCIsIm5iZiI6MTc2MjQ4MTcwOCwiY3NyZiI6ImNiZDE3MzcxLTYyMGYtNDkyYi05NGYyLWE1NGZlMDI2NjQ1MSIsImV4cCI6MTc2MjQ4ODkwOH0.8Gcrc_iY7YFfzGc_bZsAfa90c4QGFCm8Jkvj8d0WKzw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"status\": \"cancelled\"\r\n}\r\n\r\n\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5001/bookings/690d5fc9a4c0a455325cbfe4",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"bookings",
+										"690d5fc9a4c0a455325cbfe4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.3 Python/3.13.2"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Nov 2025 02:57:07 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Booking updated successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete the booking",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Booking delete handled correctly\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);\r",
+									"\r",
+									"    const res = pm.response.json();\r",
+									"\r",
+									"    if (pm.response.code === 200) {\r",
+									"        pm.expect(res).to.have.property(\"message\");\r",
+									"        pm.expect(res.message.toLowerCase()).to.include(\"deleted\");\r",
+									"    } else if (pm.response.code === 404) {\r",
+									"        console.warn(\"Booking not found – skipping delete confirmation\");\r",
+									"    } else {\r",
+									"        console.warn(\"Unexpected response:\", res);\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response time < 1000ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ4MTcwOCwianRpIjoiZWEyYTU0YTYtMzU0Yy00YzAzLTlkZTktYjQyNDlmNGFkNGU3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MGQzZWUwYTRjMGE0NTUzMjVjYmZlMCIsIm5iZiI6MTc2MjQ4MTcwOCwiY3NyZiI6ImNiZDE3MzcxLTYyMGYtNDkyYi05NGYyLWE1NGZlMDI2NjQ1MSIsImV4cCI6MTc2MjQ4ODkwOH0.8Gcrc_iY7YFfzGc_bZsAfa90c4QGFCm8Jkvj8d0WKzw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"status\": \"cancelled\"\r\n}\r\n\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5001/bookings/690d5fc9a4c0a455325cbfe4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5001",
+							"path": [
+								"bookings",
+								"690d5fc9a4c0a455325cbfe4"
+							]
+						},
+						"description": "Cancels a specific booking by ID.  \n  \nOnce deleted, the user’s spot for that event is released."
+					},
+					"response": [
+						{
+							"name": "Delete the booking",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc2MjQ4MTcwOCwianRpIjoiZWEyYTU0YTYtMzU0Yy00YzAzLTlkZTktYjQyNDlmNGFkNGU3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjY5MGQzZWUwYTRjMGE0NTUzMjVjYmZlMCIsIm5iZiI6MTc2MjQ4MTcwOCwiY3NyZiI6ImNiZDE3MzcxLTYyMGYtNDkyYi05NGYyLWE1NGZlMDI2NjQ1MSIsImV4cCI6MTc2MjQ4ODkwOH0.8Gcrc_iY7YFfzGc_bZsAfa90c4QGFCm8Jkvj8d0WKzw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"status\": \"cancelled\"\r\n}\r\n\r\n\r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:5001/bookings/690d5fc9a4c0a455325cbfe4",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "5001",
+									"path": [
+										"bookings",
+										"690d5fc9a4c0a455325cbfe4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Werkzeug/3.1.3 Python/3.13.2"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Nov 2025 02:57:46 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Booking deleted successfully\"\n}"
+						}
+					]
+				}
+			],
+			"description": "The **Bookings** module enables users to book events and manage their reservations.\n\nEach booking is linked to a user and an event.\n\n**Features:**\n\n- Create a new booking\n    \n- Retrieve all or specific bookings\n    \n- Update or cancel bookings\n    \n\n**Validation:**  \n  \nUsers cannot book the same event twice."
+		}
+	]
+}

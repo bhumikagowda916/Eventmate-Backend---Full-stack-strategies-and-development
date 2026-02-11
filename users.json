@@ -1,0 +1,202 @@
+[
+    {
+        "_id": "7a6fdd01f33c411697000001",
+        "username": "alice685",
+        "email": "alice685@example.com",
+        "password": "Password123",
+        "role": "admin",
+        "created_at": "2025-11-04T14:51:41.990096"
+    },
+    {
+        "_id": "8f410759a8084effb5000002",
+        "username": "bob133",
+        "email": "bob133@example.com",
+        "password": "Password123",
+        "role": "admin",
+        "created_at": "2025-11-04T14:51:41.990133"
+    },
+    {
+        "_id": "1cb5aa232a424f5aba000003",
+        "username": "charlie539",
+        "email": "charlie539@example.com",
+        "password": "Password123",
+        "role": "admin",
+        "created_at": "2025-11-04T14:51:41.990142"
+    },
+    {
+        "_id": "4b1e427fde4349ceb5000004",
+        "username": "david594",
+        "email": "david594@example.com",
+        "password": "Password123",
+        "role": "user",
+        "created_at": "2025-11-04T14:51:41.990149"
+    },
+    {
+        "_id": "ce2658ac228d4b2586000005",
+        "username": "ella691",
+        "email": "ella691@example.com",
+        "password": "Password123",
+        "role": "user",
+        "created_at": "2025-11-04T14:51:41.990155"
+    },
+    {
+        "_id": "b604b3f69ab6412cad000006",
+        "username": "finn115",
+        "email": "finn115@example.com",
+        "password": "Password123",
+        "role": "user",
+        "created_at": "2025-11-04T14:51:41.990162"
+    },
+    {
+        "_id": "3ea9a9eaf5a6429da7000007",
+        "username": "grace311",
+        "email": "grace311@example.com",
+        "password": "Password123",
+        "role": "user",
+        "created_at": "2025-11-04T14:51:41.990170"
+    },
+    {
+        "_id": "8767e3a7b4cc48fda0000008",
+        "username": "henry573",
+        "email": "henry573@example.com",
+        "password": "Password123",
+        "role": "user",
+        "created_at": "2025-11-04T14:51:41.990175"
+    },
+    {
+        "_id": "bddc2bc9d1b045ba84000009",
+        "username": "ivy932",
+        "email": "ivy932@example.com",
+        "password": "Password123",
+        "role": "user",
+        "created_at": "2025-11-04T14:51:41.990181"
+    },
+    {
+        "_id": "58fdbd5623904db89d00000a",
+        "username": "jack603",
+        "email": "jack603@example.com",
+        "password": "Password123",
+        "role": "user",
+        "created_at": "2025-11-04T14:51:41.990187"
+    },
+    {
+        "_id": "71857f2b64a843579000000b",
+        "username": "kara943",
+        "email": "kara943@example.com",
+        "password": "Password123",
+        "role": "user",
+        "created_at": "2025-11-04T14:51:41.990193"
+    },
+    {
+        "_id": "f6e0d10af8e24a568500000c",
+        "username": "liam384",
+        "email": "liam384@example.com",
+        "password": "Password123",
+        "role": "user",
+        "created_at": "2025-11-04T14:51:41.990202"
+    },
+    {
+        "_id": "e1630ae28bb8485db400000d",
+        "username": "mia769",
+        "email": "mia769@example.com",
+        "password": "Password123",
+        "role": "user",
+        "created_at": "2025-11-04T14:51:41.990208"
+    },
+    {
+        "_id": "077185cf78384478b800000e",
+        "username": "noah930",
+        "email": "noah930@example.com",
+        "password": "Password123",
+        "role": "user",
+        "created_at": "2025-11-04T14:51:41.990214"
+    },
+    {
+        "_id": "e9c538a8e7214d1a8b00000f",
+        "username": "olivia264",
+        "email": "olivia264@example.com",
+        "password": "Password123",
+        "role": "user",
+        "created_at": "2025-11-04T14:51:41.990222"
+    },
+    {
+        "_id": "b082614d54f54f8a94000010",
+        "username": "paul135",
+        "email": "paul135@example.com",
+        "password": "Password123",
+        "role": "user",
+        "created_at": "2025-11-04T14:51:41.990229"
+    },
+    {
+        "_id": "81b7d00a989a45178f000011",
+        "username": "quinn633",
+        "email": "quinn633@example.com",
+        "password": "Password123",
+        "role": "user",
+        "created_at": "2025-11-04T14:51:41.990235"
+    },
+    {
+        "_id": "ec6361a2a962434e93000012",
+        "username": "ryan601",
+        "email": "ryan601@example.com",
+        "password": "Password123",
+        "role": "user",
+        "created_at": "2025-11-04T14:51:41.990241"
+    },
+    {
+        "_id": "4dca3116441644dfbb000013",
+        "username": "sophia435",
+        "email": "sophia435@example.com",
+        "password": "Password123",
+        "role": "user",
+        "created_at": "2025-11-04T14:51:41.990247"
+    },
+    {
+        "_id": "730953b74cba4c9cac000014",
+        "username": "tom177",
+        "email": "tom177@example.com",
+        "password": "Password123",
+        "role": "user",
+        "created_at": "2025-11-04T14:51:41.990253"
+    },
+    {
+        "_id": "45c602bb4ef546d5ac000015",
+        "username": "uma355",
+        "email": "uma355@example.com",
+        "password": "Password123",
+        "role": "user",
+        "created_at": "2025-11-04T14:51:41.990259"
+    },
+    {
+        "_id": "c604f8b979744c95b3000016",
+        "username": "vera863",
+        "email": "vera863@example.com",
+        "password": "Password123",
+        "role": "user",
+        "created_at": "2025-11-04T14:51:41.990265"
+    },
+    {
+        "_id": "6ed2ea024d4d46d6b5000017",
+        "username": "will469",
+        "email": "will469@example.com",
+        "password": "Password123",
+        "role": "user",
+        "created_at": "2025-11-04T14:51:41.990271"
+    },
+    {
+        "_id": "21a0d221a7d046b2b1000018",
+        "username": "xena145",
+        "email": "xena145@example.com",
+        "password": "Password123",
+        "role": "user",
+        "created_at": "2025-11-04T14:51:41.990276"
+    },
+    {
+        "_id": "3f7922ffa2934e41a4000019",
+        "username": "yara530",
+        "email": "yara530@example.com",
+        "password": "Password123",
+        "role": "user",
+        "created_at": "2025-11-04T14:51:41.990282"
+    }
+]
