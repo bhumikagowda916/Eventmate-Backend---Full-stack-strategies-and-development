@@ -1,0 +1,12 @@
+{
+  "name": "eventmate-api",
+  "version": "1.0.0",
+  "description": "EventMate API automated testing with Newman",
+  "scripts": {
+    "test-api": "newman run tests/EventMate.postman_collection.json -e tests/EventMate.postman_environment.json --reporters cli,html --reporter-html-export tests/EventMate_Report.html"
+  },
+  "dependencies": {
+    "newman": "^4.6.1",
+    "newman-reporter-html": "^1.0.5"
+  }
+}
