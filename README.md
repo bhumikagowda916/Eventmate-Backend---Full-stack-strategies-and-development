@@ -146,7 +146,7 @@ It serves as a foundation for scalable backend service development and productio
 
 ---
 
-## 🎥 Demo Video
+## Demo Video
 
 A short demonstration of the application can be viewed here:
 
