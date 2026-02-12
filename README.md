@@ -142,4 +142,15 @@ This backend demonstrates:
 - Structured repository organisation
 - Iterative development with version control
 
-It serves as a foundation for scalable backend service development and production-ready API design.
+It serves as a foundation for scalable backend service development and production-ready API design. 
+
+---
+
+## 🎥 Demo Video
+
+A short demonstration of the application can be viewed here:
+
+[Watch the Project Demo](https://drive.google.com/file/d/13BYzE4nP_pxHr0uhP_CHMZjdr0sYb2Vc/view?usp=drive_link)
+
+This video showcases the system functionality, API workflow, and overall application behaviour.
+
