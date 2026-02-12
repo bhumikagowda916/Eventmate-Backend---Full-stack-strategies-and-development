@@ -1,151 +1,145 @@
-EventMate – Backend API
-Overview
+# EventMate – Backend REST API
 
-EventMate is a RESTful backend service built to support a full-stack event management application. The API handles user authentication, event creation, and booking workflows using a modular Flask-based architecture.
+## What this is
 
-The system is designed with separation of concerns in mind, dividing authentication, event logic, and booking operations into structured route modules. This backend communicates with a frontend client via HTTP requests and returns JSON responses.
+This repository contains the backend service for the EventMate event management system. It provides a RESTful API built with Flask to manage user authentication, event creation, and booking workflows.
 
-Core Features
+The backend is designed using a modular architecture so that a separate frontend application can communicate with it through structured HTTP endpoints.
 
-User registration and login
+---
 
-Event creation and retrieval
+## Key capabilities
 
-Booking management
+- User registration and login
+- Event creation and retrieval
+- Booking creation and management
+- Modular route separation
+- JSON-based lightweight data persistence
+- RESTful API structure
+- Postman collection included for endpoint testing
 
-Modular route architecture
+---
 
-JSON-based data persistence
+## Tech stack
 
-RESTful API design principles
+- Python
+- Flask
+- JSON file-based data storage
+- REST API design
+- Postman for API validation
 
-Postman collection for endpoint testing
+---
 
-Tech Stack
+## Architecture overview
 
-Language: Python
+The backend follows a modular structure:
 
-Framework: Flask
+- `app.py` – Application entry point
+- `routes/` – API endpoint definitions
+- `core/` – Core business logic and database abstraction
+- `data/` – JSON-based data storage
+- `seed/` – Data seeding scripts
+- `tests/` – API test reports and testing resources
 
-Data Storage: JSON files (lightweight persistence layer)
+This separation improves maintainability and supports future scalability.
 
-API Testing: Postman
+---
 
-Architecture Style: Modular REST API
+## API functionality
 
-Architecture
+### Authentication
+- POST /register
+- POST /login
 
-The backend is organised into logical components:
+### Events
+- GET /events
+- POST /events
+- GET /events/<id>
 
-eventmate-backend/
-│
-├── app.py                # Application entry point
-├── requirements.txt      # Python dependencies
-│
-├── routes/               # API endpoint definitions
-│   ├── auth_routes.py
-│   ├── events_routes.py
-│   └── bookings_routes.py
-│
-├── core/                 # Core business logic & utilities
-│   └── db.py
-│
-├── data/                 # JSON-based data storage
-│   ├── users.json
-│   ├── events.json
-│   └── bookings.json
-│
-├── tests/                # Testing files & API reports
-│
-└── seed/                 # Data seeding scripts
+### Bookings
+- GET /bookings
+- POST /bookings
 
-API Functionality
+(All endpoints return JSON responses.)
 
-Authentication:
+---
 
-Register new users
+## Running the project locally
 
-Login validation
-
-Events:
-
-Create event
-
-View all events
-
-Retrieve event by ID
-
-Bookings:
-
-Create booking
-
-View bookings
-
-Associate bookings with events
-
-All endpoints follow REST principles and return JSON responses.
-
-Running the Project Locally
-1. Clone repository
+### 1. Clone the repository
+```
 git clone https://github.com/YOUR_USERNAME/Eventmate-Backend---Full-stack-strategies-and-development.git
+```
 
-2. Navigate into project
+### 2. Navigate into the project directory
+```
 cd Eventmate-Backend---Full-stack-strategies-and-development
+```
 
-3. Create virtual environment
+### 3. Create a virtual environment
 
 Windows:
-
+```
 python -m venv venv
 venv\Scripts\activate
-
+```
 
 Mac/Linux:
-
+```
 python3 -m venv venv
 source venv/bin/activate
+```
 
-4. Install dependencies
+### 4. Install dependencies
+```
 pip install -r requirements.txt
+```
 
-5. Run server
+### 5. Run the server
+```
 python app.py
+```
 
-
-The API will run on:
-
+The API will run at:
+```
 http://localhost:5000
+```
 
-Testing the API
+---
 
-A Postman collection is included to test endpoints easily.
+## Data persistence
 
-Import:
+The system currently uses JSON files stored inside the `data/` directory to simulate a lightweight database. All read/write operations are abstracted through the `core` layer, allowing future migration to a relational database (e.g., PostgreSQL) with minimal structural changes.
 
-EventMate.postman_collection.json
+---
 
-EventMate.postman_environment.json
+## Testing
 
-into Postman and execute requests against the local server.
+- Postman collection files are included for testing endpoints.
+- API can be tested locally against `localhost:5000`.
+- The `tests/` directory contains test reports.
 
-Design Decisions
+---
 
-JSON files were used for lightweight persistence during development.
+## Future improvements
 
-Routes are separated into dedicated modules to improve maintainability.
+- Replace JSON storage with PostgreSQL or MySQL
+- Implement JWT-based authentication
+- Add password hashing for improved security
+- Introduce automated unit and integration testing
+- Containerise the application using Docker
+- Deploy backend to a cloud platform (Azure / Render)
 
-Data handling logic is abstracted into db.py to reduce duplication.
+---
 
-REST conventions were followed for clean and predictable endpoint structure.
+## Purpose of this project
 
-Future Improvements
+This backend demonstrates:
 
-Replace JSON storage with relational database (PostgreSQL or MySQL)
+- Modular Flask application structure
+- RESTful API development
+- Clean separation of concerns
+- Structured repository organisation
+- Iterative development with version control
 
-Implement JWT-based authentication
-
-Add input validation and error handling middleware
-
-Introduce automated unit testing
-
-Deploy backend to cloud platform (Azure or Render)
+It serves as a foundation for scalable backend service development and production-ready API design.
