@@ -68,7 +68,7 @@ This separation improves maintainability and supports future scalability.
 
 ### 1. Clone the repository
 ```
-git clone https://github.com/YOUR_USERNAME/Eventmate-Backend---Full-stack-strategies-and-development.git
+git clone https://github.com/bhumikagowda916/Eventmate-Backend---Full-stack-strategies-and-development.git
 ```
 
 ### 2. Navigate into the project directory
